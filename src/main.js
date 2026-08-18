@@ -17,6 +17,12 @@ const SCENE_PHOTOS = [
   'xingtian-snow.webp',
 ].map(name => `${import.meta.env.BASE_URL}images/backgrounds/${name}`);
 
+const CARD_FRAMES = {
+  R: `${import.meta.env.BASE_URL}images/card/R-card.webp`,
+  SR: `${import.meta.env.BASE_URL}images/card/SR-card.webp`,
+  SSR: `${import.meta.env.BASE_URL}images/card/SSR-card.webp`,
+};
+
 function startSceneCarousel() {
   const layers = [document.getElementById('scenePhotoA'), document.getElementById('scenePhotoB')];
   let active = 0;
@@ -35,6 +41,37 @@ function startSceneCarousel() {
   }, 5000);
 }
 
+const RARITY_WEIGHTS = { SSR: 0.02, SR: 0.15, R: 0.83 };
+
+function pickWeighted(pool) {
+  const tiers = { SSR: [], SR: [], R: [] };
+  pool.forEach(s => tiers[s.rarity || 'R'].push(s));
+  const availableTiers = Object.keys(tiers).filter(t => tiers[t].length > 0);
+  const totalWeight = availableTiers.reduce((sum, t) => sum + RARITY_WEIGHTS[t], 0);
+  let r = Math.random() * totalWeight;
+  for (const t of availableTiers) {
+    if (r < RARITY_WEIGHTS[t]) {
+      const list = tiers[t];
+      return list[Math.floor(Math.random() * list.length)];
+    }
+    r -= RARITY_WEIGHTS[t];
+  }
+  const lastTier = tiers[availableTiers[availableTiers.length - 1]];
+  return lastTier[Math.floor(Math.random() * lastTier.length)];
+}
+
+function drawTenWithPity(pool) {
+  const results = [];
+  for (let i = 0; i < 9; i++) results.push(pickWeighted(pool));
+  if (results.some(s => s.rarity === 'SSR')) {
+    results.push(pickWeighted(pool));
+  } else {
+    const ssrList = pool.filter(s => s.rarity === 'SSR');
+    results.push(ssrList.length ? ssrList[Math.floor(Math.random() * ssrList.length)] : pickWeighted(pool));
+  }
+  return results;
+}
+
 const filtersEl = document.getElementById('filters');
 const questPromptEl = document.getElementById('questPrompt');
 const poolNoteEl = document.getElementById('poolNote');
@@ -43,6 +80,8 @@ const cardBackEl = document.querySelector('.card-back');
 const cardFrontEl = document.getElementById('cardFront');
 const cardFrontBody = document.getElementById('cardFrontBody');
 const spinBtn = document.getElementById('spinBtn');
+const tenSpinBtn = document.getElementById('tenSpinBtn');
+const tenPullResultsEl = document.getElementById('tenPullResults');
 
 function renderFilters() {
   filtersEl.replaceChildren(...CATEGORIES.map(c => {
@@ -73,10 +112,14 @@ function renderAll() {
     ? `目前牌組共 <strong>${currentPool.length}</strong> 家店`
     : '';
   spinBtn.disabled = currentPool.length === 0;
+  tenSpinBtn.disabled = currentPool.length === 0;
   drawCard.classList.remove('squeeze');
   cardBackEl.classList.remove('face-hidden');
   cardFrontEl.classList.remove('face-visible');
   cardFrontBody.innerHTML = '';
+  tenPullResultsEl.hidden = true;
+  tenPullResultsEl.innerHTML = '';
+  drawCard.parentElement.hidden = false;
 }
 
 function spark(container) {
@@ -100,6 +143,12 @@ function spark(container) {
 
 function renderCardFront(store, idx) {
   const catLabel = CATEGORIES.find(c => c.key === store.cat).label;
+  const rarity = store.rarity || 'R';
+  cardFrontEl.dataset.rarity = rarity;
+  cardFrontEl.style.backgroundImage =
+    `url(${CARD_FRAMES[rarity]}), radial-gradient(circle at 50% 18%, rgba(217,154,43,.2), transparent 55%), linear-gradient(180deg, #fffdf7 0%, var(--paper) 100%)`;
+  cardFrontEl.style.backgroundSize = '100% 100%, auto, auto';
+  cardFrontEl.style.backgroundRepeat = 'no-repeat, no-repeat, no-repeat';
   const mapUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(store.name + ' ' + store.addr + ' 台北市中山區');
   cardFrontBody.innerHTML = `
     <div class="badge mono">#${idx}</div>
@@ -123,9 +172,8 @@ function doSpin() {
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const swapAndReveal = () => {
-    const pool = currentPool;
-    const targetIndex = Math.floor(Math.random() * pool.length);
-    renderCardFront(pool[targetIndex], targetIndex + 1);
+    const store = pickWeighted(currentPool);
+    renderCardFront(store, currentPool.indexOf(store) + 1);
     cardBackEl.classList.add('face-hidden');
     cardFrontEl.classList.add('face-visible');
   };
@@ -169,7 +217,40 @@ function doSpin() {
   drawCard.classList.add('lift');
 }
 
+function doTenSpin() {
+  if (spinning || currentPool.length === 0) return;
+  spinning = true;
+  spinBtn.disabled = true;
+  tenSpinBtn.disabled = true;
+
+  const results = drawTenWithPity(currentPool);
+
+  drawCard.parentElement.hidden = true;
+  tenPullResultsEl.innerHTML = '';
+  tenPullResultsEl.hidden = false;
+
+  results.forEach((store, i) => {
+    const tile = document.createElement('div');
+    tile.className = 'pull-tile';
+    tile.dataset.rarity = store.rarity || 'R';
+    tile.style.animationDelay = (i * 0.08) + 's';
+    const catLabel = CATEGORIES.find(c => c.key === store.cat).label;
+    tile.innerHTML = `
+      <span class="pull-rarity">${store.rarity || 'R'}</span>
+      <div class="cat-tag"><span class="dot" style="--dot:${catColor(store.cat)}"></span>${catLabel}</div>
+      <div class="pull-name">${store.name}</div>
+    `;
+    tenPullResultsEl.appendChild(tile);
+  });
+
+  spinning = false;
+  spinBtn.disabled = false;
+  tenSpinBtn.disabled = false;
+  spark(document.querySelector('.card-stage').parentElement);
+}
+
 spinBtn.addEventListener('click', doSpin);
+tenSpinBtn.addEventListener('click', doTenSpin);
 
 startSceneCarousel();
 renderAll();
