@@ -1,0 +1,22 @@
+[
+  {
+    "key": "lunch",
+    "label": "午餐",
+    "var": "--cat-lunch"
+  },
+  {
+    "key": "dinner",
+    "label": "晚餐",
+    "var": "--cat-dinner"
+  },
+  {
+    "key": "drink",
+    "label": "飲料",
+    "var": "--cat-drink"
+  },
+  {
+    "key": "dessert",
+    "label": "甜點",
+    "var": "--cat-dessert"
+  }
+]

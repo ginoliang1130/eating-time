@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>吃飯了 Eating Time</title>
+  </head>
+  <body>
+    <div class="scene" aria-hidden="true">
+      <div class="scene-photo"></div>
+      <div class="scene-tint"></div>
+      <div class="scene-vignette"></div>
+    </div>
+
+    <div class="page">
+      <header class="altar">
+        <p class="eyebrow">TAIPEI · 中山區 · 松江路223號 · 半徑 3KM</p>
+        <h1 class="title serif">吃飯了<span class="title-en">Eating Time</span></h1>
+        <p class="subtitle">以松江路223號（近行天宮站）為圓心，3公里內真實店家名單。先選好想吃的類型，抽一張卡，今天不用再糾結吃什麼。</p>
+
+        <section class="wheel-section" aria-label="抽卡選店">
+          <p class="quest-prompt" id="questPrompt">請先選擇冒險方向</p>
+          <div class="meal-select" id="filters" role="group" aria-label="選擇用餐類型"></div>
+
+          <div class="card-stage">
+            <div class="draw-card" id="drawCard">
+              <div class="card-face card-back">
+                <span class="rivet tl"></span><span class="rivet tr"></span><span class="rivet bl"></span><span class="rivet br"></span>
+                <svg class="card-back-emblem" width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+                  <path d="M12 20c0-7 6-13 14-13s14 6 14 13" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+                  <path d="M9 20h34l-2.4 15.5C40 39.5 36 42 26 42s-14-2.5-14.6-6.5L9 20z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+                  <line x1="26" y1="6" x2="26" y2="13" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+                <div class="card-back-mark">吃飯了</div>
+              </div>
+              <div class="card-face card-front" id="cardFront">
+                <span class="rivet tl"></span><span class="rivet tr"></span><span class="rivet bl"></span><span class="rivet br"></span>
+                <div class="card-front-content" id="cardFrontBody"></div>
+              </div>
+            </div>
+          </div>
+
+          <button id="spinBtn" class="draw-btn">抽卡<span class="draw-btn-en">Draw</span></button>
+
+          <p class="pool-note" id="poolNote"></p>
+        </section>
+      </header>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
