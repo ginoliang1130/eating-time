@@ -57,8 +57,13 @@
   }
   .scene-photo{
     position:absolute; inset:0;
-    background-image:url(/images/backgrounds/xingtian-summer.png);
     background-size:cover; background-position:center 55%;
+    opacity:0;
+    transition: opacity 1.4s ease-in-out;
+  }
+  .scene-photo.active{ opacity:1; }
+  @media (prefers-reduced-motion: reduce){
+    .scene-photo{ transition:none; }
   }
   .scene-tint{
     position:absolute; inset:0;

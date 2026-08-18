@@ -10,6 +10,31 @@ let selectedCat = null;
 let spinning = false;
 let currentPool = [];
 
+const SCENE_PHOTOS = [
+  '/images/backgrounds/xingtian-summer.png',
+  '/images/backgrounds/xingtian-night.png',
+  '/images/backgrounds/xingtian-rain.png',
+  '/images/backgrounds/xingtian-snow.png',
+];
+
+function startSceneCarousel() {
+  const layers = [document.getElementById('scenePhotoA'), document.getElementById('scenePhotoB')];
+  let active = 0;
+  let index = 0;
+
+  layers[0].style.backgroundImage = `url(${SCENE_PHOTOS[0]})`;
+  layers[0].classList.add('active');
+
+  setInterval(() => {
+    index = (index + 1) % SCENE_PHOTOS.length;
+    const next = (active + 1) % layers.length;
+    layers[next].style.backgroundImage = `url(${SCENE_PHOTOS[index]})`;
+    layers[next].classList.add('active');
+    layers[active].classList.remove('active');
+    active = next;
+  }, 5000);
+}
+
 const filtersEl = document.getElementById('filters');
 const questPromptEl = document.getElementById('questPrompt');
 const poolNoteEl = document.getElementById('poolNote');
@@ -135,4 +160,5 @@ function doSpin() {
 
 spinBtn.addEventListener('click', doSpin);
 
+startSceneCarousel();
 renderAll();
