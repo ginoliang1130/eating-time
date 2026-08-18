@@ -223,18 +223,29 @@ function doTenSpin() {
   spinBtn.disabled = true;
   tenSpinBtn.disabled = true;
 
-  const results = drawTenWithPity(currentPool);
+  const drawn = drawTenWithPity(currentPool);
+  // show non-SSR results first, SSR pull(s) last as the finale
+  const results = [
+    ...drawn.filter(s => s.rarity !== 'SSR'),
+    ...drawn.filter(s => s.rarity === 'SSR'),
+  ];
 
   drawCard.parentElement.hidden = true;
   tenPullResultsEl.innerHTML = '';
   tenPullResultsEl.hidden = false;
+
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const nonSSRCount = results.filter(s => s.rarity !== 'SSR').length;
 
   results.forEach((store, i) => {
     const tile = document.createElement('div');
     tile.className = 'pull-tile';
     const tileRarity = store.rarity || 'R';
     tile.dataset.rarity = tileRarity;
-    tile.style.animationDelay = (i * 0.08) + 's';
+    const isFinaleSSR = tileRarity === 'SSR' && i >= nonSSRCount;
+    tile.style.animationDelay = reduced
+      ? '0s'
+      : (isFinaleSSR ? (nonSSRCount * 0.08 + 0.45 + (i - nonSSRCount) * 0.2) : (i * 0.08)) + 's';
     tile.style.backgroundImage =
       `url(${CARD_FRAMES[tileRarity]}), radial-gradient(circle at 50% 18%, rgba(217,154,43,.2), transparent 55%), linear-gradient(180deg, #fffdf7 0%, var(--paper) 100%)`;
     tile.style.backgroundSize = '100% 100%, auto, auto';
@@ -246,6 +257,9 @@ function doTenSpin() {
       <div class="pull-name">${store.name}</div>
     `;
     tenPullResultsEl.appendChild(tile);
+    if (isFinaleSSR && !reduced) {
+      tile.addEventListener('animationend', () => spark(tile), { once: true });
+    }
   });
 
   spinning = false;
