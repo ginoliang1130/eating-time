@@ -232,8 +232,13 @@ function doTenSpin() {
   results.forEach((store, i) => {
     const tile = document.createElement('div');
     tile.className = 'pull-tile';
-    tile.dataset.rarity = store.rarity || 'R';
+    const tileRarity = store.rarity || 'R';
+    tile.dataset.rarity = tileRarity;
     tile.style.animationDelay = (i * 0.08) + 's';
+    tile.style.backgroundImage =
+      `url(${CARD_FRAMES[tileRarity]}), radial-gradient(circle at 50% 18%, rgba(217,154,43,.2), transparent 55%), linear-gradient(180deg, #fffdf7 0%, var(--paper) 100%)`;
+    tile.style.backgroundSize = '100% 100%, auto, auto';
+    tile.style.backgroundRepeat = 'no-repeat, no-repeat, no-repeat';
     const catLabel = CATEGORIES.find(c => c.key === store.cat).label;
     tile.innerHTML = `
       <span class="pull-rarity">${store.rarity || 'R'}</span>
