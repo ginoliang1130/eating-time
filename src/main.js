@@ -142,20 +142,31 @@ function doSpin() {
     return;
   }
 
+  const onExpandDone = (e) => {
+    if (e.propertyName !== 'transform') return;
+    drawCard.removeEventListener('transitionend', onExpandDone);
+    drawCard.classList.remove('expanding');
+    finish();
+  };
+
   const onSqueezeIn = (e) => {
     if (e.propertyName !== 'transform') return;
     drawCard.removeEventListener('transitionend', onSqueezeIn);
     swapAndReveal();
-    const onSqueezeOut = (e2) => {
-      if (e2.propertyName !== 'transform') return;
-      drawCard.removeEventListener('transitionend', onSqueezeOut);
-      finish();
-    };
-    drawCard.addEventListener('transitionend', onSqueezeOut);
+    drawCard.addEventListener('transitionend', onExpandDone);
+    drawCard.classList.add('expanding');
     drawCard.classList.remove('squeeze');
   };
-  drawCard.addEventListener('transitionend', onSqueezeIn);
-  drawCard.classList.add('squeeze');
+
+  const onLiftDone = (e) => {
+    if (e.propertyName !== 'transform') return;
+    drawCard.removeEventListener('transitionend', onLiftDone);
+    drawCard.addEventListener('transitionend', onSqueezeIn);
+    drawCard.classList.remove('lift');
+    drawCard.classList.add('squeeze');
+  };
+  drawCard.addEventListener('transitionend', onLiftDone);
+  drawCard.classList.add('lift');
 }
 
 spinBtn.addEventListener('click', doSpin);
