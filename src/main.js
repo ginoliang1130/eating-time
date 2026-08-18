@@ -11,11 +11,11 @@ let spinning = false;
 let currentPool = [];
 
 const SCENE_PHOTOS = [
-  '/images/backgrounds/xingtian-summer.png',
-  '/images/backgrounds/xingtian-night.png',
-  '/images/backgrounds/xingtian-rain.png',
-  '/images/backgrounds/xingtian-snow.png',
-];
+  'xingtian-summer.webp',
+  'xingtian-night.webp',
+  'xingtian-rain.webp',
+  'xingtian-snow.webp',
+].map(name => `${import.meta.env.BASE_URL}images/backgrounds/${name}`);
 
 function startSceneCarousel() {
   const layers = [document.getElementById('scenePhotoA'), document.getElementById('scenePhotoB')];
