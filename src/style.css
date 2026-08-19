@@ -349,9 +349,13 @@
     overflow:hidden; line-clamp:2;
   }
   .pull-tile .addr{
-    display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:1;
-    overflow:hidden; line-clamp:1;
+    display:flex; align-items:baseline; justify-content:center; gap:.4em;
   }
+  .pull-tile .addr-text{
+    display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:1;
+    overflow:hidden; line-clamp:1; min-width:0;
+  }
+  .pull-tile .walk{ flex-shrink:0; white-space:nowrap; }
   .pull-tile .desc{
     display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2;
     overflow:hidden; line-clamp:2;
@@ -417,6 +421,7 @@
   .card-front .cat-tag .dot, .pull-tile .cat-tag .dot{ width:.55em;height:.55em;border-radius:50%; background:var(--dot,#888); }
   .card-front h3, .pull-tile h3{ margin:.1rem 0 .4rem; font-size:1.2rem; color: var(--ink); font-family: "Songti TC","PMingLiU","Noto Serif TC",serif; }
   .card-front .addr, .pull-tile .addr{ font-size:.75rem; color: var(--ink-dim); margin-bottom:.5rem; }
+  .card-front .walk, .pull-tile .walk{ color: var(--turmeric); font-weight:700; }
   .card-front .desc, .pull-tile .desc{ font-size:.82rem; color: var(--ink); margin-bottom: .7rem; }
   .card-front .caution, .pull-tile .caution{
     font-size:.68rem; color: var(--turmeric); background: rgba(241,197,111,.1);

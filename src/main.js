@@ -208,7 +208,7 @@ function renderCardFront(store, idx) {
     <div class="badge mono">#${idx}</div>
     <div class="cat-tag"><span class="dot" style="--dot:${catColor(store.cat)}"></span>${catLabel}</div>
     <h3>${store.name}</h3>
-    <div class="addr">${store.addr}</div>
+    <div class="addr"><span class="addr-text">${store.addr}</span>${store.walkMin ? `<span class="walk">🚶 約${store.walkMin}分</span>` : ''}</div>
     <div class="desc">${store.desc}</div>
     ${store.caution ? `<div class="caution">⚠️ ${store.caution}</div>` : ''}
     <div class="actions">
@@ -307,7 +307,7 @@ function doTenSpin() {
         <div class="badge mono">#${idx}</div>
         <div class="cat-tag"><span class="dot" style="--dot:${catColor(store.cat)}"></span>${catLabel}</div>
         <h3>${store.name}</h3>
-        <div class="addr">${store.addr}</div>
+        <div class="addr"><span class="addr-text">${store.addr}</span>${store.walkMin ? `<span class="walk">🚶 約${store.walkMin}分</span>` : ''}</div>
         <div class="desc">${store.desc}</div>
         ${store.caution ? `<div class="caution">⚠️ ${store.caution}</div>` : ''}
         <div class="actions">
