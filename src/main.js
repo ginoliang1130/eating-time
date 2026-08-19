@@ -62,13 +62,30 @@ function pickWeighted(pool) {
 
 function drawTenWithPity(pool) {
   const results = [];
-  for (let i = 0; i < 9; i++) results.push(pickWeighted(pool));
-  if (results.some(s => s.rarity === 'SSR')) {
-    results.push(pickWeighted(pool));
-  } else {
-    const ssrList = pool.filter(s => s.rarity === 'SSR');
-    results.push(ssrList.length ? ssrList[Math.floor(Math.random() * ssrList.length)] : pickWeighted(pool));
+  const usedIds = new Set();
+  const remainingPool = () => {
+    const remaining = pool.filter(s => !usedIds.has(s.id));
+    return remaining.length ? remaining : pool; // pool smaller than 10: allow repeats once exhausted
+  };
+
+  for (let i = 0; i < 9; i++) {
+    const store = pickWeighted(remainingPool());
+    usedIds.add(store.id);
+    results.push(store);
   }
+
+  if (results.some(s => s.rarity === 'SSR')) {
+    const store = pickWeighted(remainingPool());
+    usedIds.add(store.id);
+    results.push(store);
+  } else {
+    const unusedSsr = pool.filter(s => s.rarity === 'SSR' && !usedIds.has(s.id));
+    const ssrList = unusedSsr.length ? unusedSsr : pool.filter(s => s.rarity === 'SSR');
+    const store = ssrList.length ? ssrList[Math.floor(Math.random() * ssrList.length)] : pickWeighted(remainingPool());
+    usedIds.add(store.id);
+    results.push(store);
+  }
+
   return results;
 }
 
@@ -107,13 +124,17 @@ function getPool() {
 function renderAll() {
   renderFilters();
   currentPool = getPool();
+  spinning = false; // cancel any in-flight reveal so a mid-animation category switch can't strand the draw buttons disabled
   questPromptEl.hidden = !!selectedCat;
   poolNoteEl.innerHTML = selectedCat
-    ? `目前牌組共 <strong>${currentPool.length}</strong> 家店`
+    ? '牌組已就位，抽一張看緣分'
     : '';
   spinBtn.disabled = currentPool.length === 0;
   tenSpinBtn.disabled = currentPool.length === 0;
-  drawCard.classList.remove('squeeze');
+  drawCard.classList.remove('lift');
+  drawCard.style.transform = '';
+  drawCard.style.filter = '';
+  drawCard.style.transition = '';
   cardBackEl.classList.remove('face-hidden');
   cardFrontEl.classList.remove('face-visible');
   cardFrontBody.innerHTML = '';
@@ -139,6 +160,39 @@ function spark(container) {
     container.appendChild(el);
     el.addEventListener('animationend', () => el.remove());
   }
+}
+
+// Drives the squeeze-pinch -> swap -> expand reveal via inline transform/filter
+// rather than CSS classes, so it can safely run right after an element's own
+// entrance animation hands off control (a class-based approach would fight
+// with the inline styles that handoff needs).
+function runSqueezeReveal(el, onSqueezed, onDone) {
+  el.style.transition = 'transform .22s cubic-bezier(.55,0,.85,.35), filter .22s cubic-bezier(.55,0,.85,.35)';
+  void el.offsetHeight;
+
+  const onSqueezeDone = (e) => {
+    if (e.propertyName !== 'transform') return;
+    el.removeEventListener('transitionend', onSqueezeDone);
+    onSqueezed();
+    el.style.transition = 'transform .34s cubic-bezier(.34,1.56,.64,1), filter .26s ease-out';
+    el.style.transform = 'none';
+    el.style.filter = 'none';
+    el.addEventListener('transitionend', onExpandDone);
+  };
+  const onExpandDone = (e) => {
+    if (e.propertyName !== 'transform') return;
+    el.removeEventListener('transitionend', onExpandDone);
+    // clear the inline overrides once settled, otherwise they'd outrank (and
+    // silently no-op) any CSS class-driven transform used on the next reveal,
+    // e.g. #drawCard's `.lift` phase on a subsequent draw.
+    el.style.transition = '';
+    el.style.transform = '';
+    el.style.filter = '';
+    onDone && onDone();
+  };
+  el.addEventListener('transitionend', onSqueezeDone);
+  el.style.transform = 'scaleX(.04) rotate(1deg)';
+  el.style.filter = 'brightness(.5)';
 }
 
 function renderCardFront(store, idx) {
@@ -169,6 +223,8 @@ function doSpin() {
   if (spinning || currentPool.length === 0) return;
   spinning = true;
   spinBtn.disabled = true;
+  tenPullResultsEl.hidden = true;
+  drawCard.parentElement.hidden = false;
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const swapAndReveal = () => {
@@ -190,30 +246,17 @@ function doSpin() {
     return;
   }
 
-  const onExpandDone = (e) => {
-    if (e.propertyName !== 'transform') return;
-    drawCard.removeEventListener('transitionend', onExpandDone);
-    drawCard.classList.remove('expanding');
-    finish();
-  };
-
-  const onSqueezeIn = (e) => {
-    if (e.propertyName !== 'transform') return;
-    drawCard.removeEventListener('transitionend', onSqueezeIn);
-    swapAndReveal();
-    drawCard.addEventListener('transitionend', onExpandDone);
-    drawCard.classList.add('expanding');
-    drawCard.classList.remove('squeeze');
-  };
-
   const onLiftDone = (e) => {
     if (e.propertyName !== 'transform') return;
     drawCard.removeEventListener('transitionend', onLiftDone);
-    drawCard.addEventListener('transitionend', onSqueezeIn);
     drawCard.classList.remove('lift');
-    drawCard.classList.add('squeeze');
+    runSqueezeReveal(drawCard, swapAndReveal, finish);
   };
   drawCard.addEventListener('transitionend', onLiftDone);
+  // force layout so the browser registers the just-unhidden state before
+  // the transition-triggering class is added, otherwise no transition
+  // starts (nothing to animate from) and transitionend never fires.
+  void drawCard.offsetHeight;
   drawCard.classList.add('lift');
 }
 
@@ -223,49 +266,96 @@ function doTenSpin() {
   spinBtn.disabled = true;
   tenSpinBtn.disabled = true;
 
-  const drawn = drawTenWithPity(currentPool);
-  // show non-SSR results first, SSR pull(s) last as the finale
-  const results = [
-    ...drawn.filter(s => s.rarity !== 'SSR'),
-    ...drawn.filter(s => s.rarity === 'SSR'),
-  ];
+  const results = drawTenWithPity(currentPool);
+  // shuffle so the SSR/pity pull doesn't always land in a predictable slot
+  for (let i = results.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [results[i], results[j]] = [results[j], results[i]];
+  }
 
   drawCard.parentElement.hidden = true;
   tenPullResultsEl.innerHTML = '';
   tenPullResultsEl.hidden = false;
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const nonSSRCount = results.filter(s => s.rarity !== 'SSR').length;
+  let pending = results.length;
+
+  const finishOne = () => {
+    pending -= 1;
+    if (pending <= 0) {
+      spinning = false;
+      spinBtn.disabled = false;
+      tenSpinBtn.disabled = false;
+    }
+  };
 
   results.forEach((store, i) => {
     const tile = document.createElement('div');
     tile.className = 'pull-tile';
     const tileRarity = store.rarity || 'R';
     tile.dataset.rarity = tileRarity;
-    const isFinaleSSR = tileRarity === 'SSR' && i >= nonSSRCount;
-    tile.style.animationDelay = reduced
-      ? '0s'
-      : (isFinaleSSR ? (nonSSRCount * 0.08 + 0.45 + (i - nonSSRCount) * 0.2) : (i * 0.08)) + 's';
-    tile.style.backgroundImage =
-      `url(${CARD_FRAMES[tileRarity]}), radial-gradient(circle at 50% 18%, rgba(217,154,43,.2), transparent 55%), linear-gradient(180deg, #fffdf7 0%, var(--paper) 100%)`;
-    tile.style.backgroundSize = '100% 100%, auto, auto';
-    tile.style.backgroundRepeat = 'no-repeat, no-repeat, no-repeat';
+    tile.style.animationDelay = reduced ? '0s' : (i * 0.06) + 's';
     const catLabel = CATEGORIES.find(c => c.key === store.cat).label;
+    const idx = currentPool.indexOf(store) + 1;
+    const mapUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(store.name + ' ' + store.addr + ' 台北市中山區');
     tile.innerHTML = `
-      <span class="pull-rarity">${store.rarity || 'R'}</span>
-      <div class="cat-tag"><span class="dot" style="--dot:${catColor(store.cat)}"></span>${catLabel}</div>
-      <div class="pull-name">${store.name}</div>
+      <div class="tile-face tile-back">
+        <span class="tile-back-mark">吃飯了</span>
+        <span class="tile-back-hint">點一下翻牌</span>
+      </div>
+      <div class="tile-face tile-front">
+        <div class="badge mono">#${idx}</div>
+        <div class="cat-tag"><span class="dot" style="--dot:${catColor(store.cat)}"></span>${catLabel}</div>
+        <h3>${store.name}</h3>
+        <div class="addr">${store.addr}</div>
+        <div class="desc">${store.desc}</div>
+        ${store.caution ? `<div class="caution">⚠️ ${store.caution}</div>` : ''}
+        <div class="actions">
+          <a class="btn-ghost" href="${mapUrl}" target="_blank" rel="noopener">在 Google 地圖開啟</a>
+        </div>
+      </div>
     `;
+    const tileFront = tile.querySelector('.tile-front');
+    tileFront.style.backgroundImage =
+      `url(${CARD_FRAMES[tileRarity]}), radial-gradient(circle at 50% 18%, rgba(217,154,43,.2), transparent 55%), linear-gradient(180deg, #fffdf7 0%, var(--paper) 100%)`;
+    tileFront.style.backgroundSize = '100% 100%, auto, auto';
+    tileFront.style.backgroundRepeat = 'no-repeat, no-repeat, no-repeat';
     tenPullResultsEl.appendChild(tile);
-    if (isFinaleSSR && !reduced) {
-      tile.addEventListener('animationend', () => spark(tile), { once: true });
-    }
-  });
 
-  spinning = false;
-  spinBtn.disabled = false;
-  tenSpinBtn.disabled = false;
-  spark(document.querySelector('.card-stage').parentElement);
+    const tileBack = tile.querySelector('.tile-back');
+    const reveal = () => {
+      tileBack.classList.add('face-hidden');
+      tileFront.classList.add('face-visible');
+    };
+    const afterReveal = () => {
+      if (tileRarity === 'SSR') spark(tile);
+      finishOne();
+    };
+
+    if (reduced) {
+      reveal();
+      afterReveal();
+      return;
+    }
+
+    const flip = () => {
+      tile.removeEventListener('click', flip);
+      tile.classList.remove('flippable');
+      runSqueezeReveal(tile, reveal, afterReveal);
+    };
+
+    tile.addEventListener('animationend', function onEntranceEnd() {
+      tile.removeEventListener('animationend', onEntranceEnd);
+      // lock in the entrance's final look as inline styles before dropping the
+      // animation, otherwise clearing `animation` also drops its forwards-held
+      // end state and the tile snaps back to its (invisible) pre-entrance look.
+      tile.style.opacity = '1';
+      tile.style.transform = 'none';
+      tile.style.animation = 'none';
+      tile.classList.add('flippable');
+      tile.addEventListener('click', flip);
+    }, { once: true });
+  });
 }
 
 spinBtn.addEventListener('click', doSpin);
