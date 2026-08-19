@@ -199,14 +199,15 @@ function renderCardFront(store, idx) {
   const catLabel = CATEGORIES.find(c => c.key === store.cat).label;
   const rarity = store.rarity || 'R';
   cardFrontEl.dataset.rarity = rarity;
-  cardFrontEl.style.backgroundImage =
-    `url(${CARD_FRAMES[rarity]}), radial-gradient(circle at 50% 18%, rgba(217,154,43,.2), transparent 55%), linear-gradient(180deg, #fffdf7 0%, var(--paper) 100%)`;
-  cardFrontEl.style.backgroundSize = '100% 100%, auto, auto';
-  cardFrontEl.style.backgroundRepeat = 'no-repeat, no-repeat, no-repeat';
+  cardFrontEl.style.backgroundImage = `url(${CARD_FRAMES[rarity]})`;
+  cardFrontEl.style.backgroundSize = '100% 100%';
+  cardFrontEl.style.backgroundRepeat = 'no-repeat';
   const mapUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(store.name + ' ' + store.addr + ' 台北市中山區');
   cardFrontBody.innerHTML = `
-    <div class="badge mono">#${idx}</div>
-    <div class="cat-tag"><span class="dot" style="--dot:${catColor(store.cat)}"></span>${catLabel}</div>
+    <div class="card-top-row">
+      <div class="badge mono">#${idx}</div>
+      <div class="cat-tag"><span class="dot" style="--dot:${catColor(store.cat)}"></span>${catLabel}</div>
+    </div>
     <h3>${store.name}</h3>
     <div class="addr"><span class="addr-text">${store.addr}</span>${store.walkMin ? `<span class="walk">🚶 約${store.walkMin}分</span>` : ''}</div>
     <div class="desc">${store.desc}</div>
@@ -304,8 +305,10 @@ function doTenSpin() {
         <span class="tile-back-hint">點一下翻牌</span>
       </div>
       <div class="tile-face tile-front">
-        <div class="badge mono">#${idx}</div>
-        <div class="cat-tag"><span class="dot" style="--dot:${catColor(store.cat)}"></span>${catLabel}</div>
+        <div class="card-top-row">
+          <div class="badge mono">#${idx}</div>
+          <div class="cat-tag"><span class="dot" style="--dot:${catColor(store.cat)}"></span>${catLabel}</div>
+        </div>
         <h3>${store.name}</h3>
         <div class="addr"><span class="addr-text">${store.addr}</span>${store.walkMin ? `<span class="walk">🚶 約${store.walkMin}分</span>` : ''}</div>
         <div class="desc">${store.desc}</div>
@@ -316,10 +319,9 @@ function doTenSpin() {
       </div>
     `;
     const tileFront = tile.querySelector('.tile-front');
-    tileFront.style.backgroundImage =
-      `url(${CARD_FRAMES[tileRarity]}), radial-gradient(circle at 50% 18%, rgba(217,154,43,.2), transparent 55%), linear-gradient(180deg, #fffdf7 0%, var(--paper) 100%)`;
-    tileFront.style.backgroundSize = '100% 100%, auto, auto';
-    tileFront.style.backgroundRepeat = 'no-repeat, no-repeat, no-repeat';
+    tileFront.style.backgroundImage = `url(${CARD_FRAMES[tileRarity]})`;
+    tileFront.style.backgroundSize = '100% 100%';
+    tileFront.style.backgroundRepeat = 'no-repeat';
     tenPullResultsEl.appendChild(tile);
 
     const tileBack = tile.querySelector('.tile-back');
