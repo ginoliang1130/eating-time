@@ -334,6 +334,7 @@ function doTenSpin() {
     const reveal = () => {
       tileBack.classList.add('face-hidden');
       tileFront.classList.add('face-visible');
+      tile.classList.add('revealed');
     };
     const afterReveal = () => {
       if (tileRarity === 'SSR') spark(tile);

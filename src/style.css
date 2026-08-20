@@ -374,17 +374,17 @@
   @media (prefers-reduced-motion: reduce){
     .pull-tile{ animation:none; opacity:1; transform:none; }
   }
-  .pull-tile[data-rarity="SSR"]{
-    animation: pull-tile-ssr-in .55s cubic-bezier(.3,1.6,.4,1) forwards;
+  .pull-tile[data-rarity="SSR"].revealed{
+    animation: pull-tile-ssr-pop .4s cubic-bezier(.3,1.6,.4,1) both;
     box-shadow: 0 0 24px rgba(217,154,43,.65), 0 6px 14px rgba(0,0,0,.25);
   }
-  @keyframes pull-tile-ssr-in{
-    0%{ opacity:0; transform: translateY(10px) scale(.7); }
-    70%{ opacity:1; transform: scale(1.12); }
-    100%{ opacity:1; transform: scale(1); }
+  @keyframes pull-tile-ssr-pop{
+    0%{ transform: scale(1); }
+    60%{ transform: scale(1.12); }
+    100%{ transform: scale(1); }
   }
   @media (prefers-reduced-motion: reduce){
-    .pull-tile[data-rarity="SSR"]{ animation:none; opacity:1; transform:none; }
+    .pull-tile[data-rarity="SSR"].revealed{ animation:none; }
   }
   .draw-btn[disabled]:hover{ transform:none; }
 
