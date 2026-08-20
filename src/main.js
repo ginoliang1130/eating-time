@@ -41,7 +41,7 @@ function startSceneCarousel() {
   }, 5000);
 }
 
-const RARITY_WEIGHTS = { SSR: 0.02, SR: 0.15, R: 0.83 };
+const RARITY_WEIGHTS = { SSR: 0.05, SR: 0.15, R: 0.80 };
 
 function pickWeighted(pool) {
   const tiers = { SSR: [], SR: [], R: [] };
@@ -199,6 +199,7 @@ function renderCardFront(store, idx) {
   const catLabel = CATEGORIES.find(c => c.key === store.cat).label;
   const rarity = store.rarity || 'R';
   cardFrontEl.dataset.rarity = rarity;
+  cardFrontEl.classList.toggle('has-caution', !!store.caution);
   cardFrontEl.style.backgroundImage = `url(${CARD_FRAMES[rarity]})`;
   cardFrontEl.style.backgroundSize = '100% 100%';
   cardFrontEl.style.backgroundRepeat = 'no-repeat';
@@ -292,7 +293,7 @@ function doTenSpin() {
 
   results.forEach((store, i) => {
     const tile = document.createElement('div');
-    tile.className = 'pull-tile';
+    tile.className = 'pull-tile' + (store.caution ? ' has-caution' : '');
     const tileRarity = store.rarity || 'R';
     tile.dataset.rarity = tileRarity;
     tile.style.animationDelay = reduced ? '0s' : (i * 0.06) + 's';
@@ -301,6 +302,11 @@ function doTenSpin() {
     const mapUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(store.name + ' ' + store.addr + ' 台北市中山區');
     tile.innerHTML = `
       <div class="tile-face tile-back">
+        <svg class="tile-back-emblem" width="36" height="36" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+          <path d="M12 20c0-7 6-13 14-13s14 6 14 13" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M9 20h34l-2.4 15.5C40 39.5 36 42 26 42s-14-2.5-14.6-6.5L9 20z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+          <line x1="26" y1="6" x2="26" y2="13" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
         <span class="tile-back-mark">吃飯了</span>
         <span class="tile-back-hint">點一下翻牌</span>
       </div>

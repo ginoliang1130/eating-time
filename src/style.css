@@ -188,7 +188,7 @@
   .card-stage{
     position:relative;
     width: min(78vw, 280px);
-    aspect-ratio: 5/7.6;
+    aspect-ratio: 5/8;
   }
   .card-stage::before{
     content:"";
@@ -247,7 +247,7 @@
     border-radius: 2px;
     box-shadow: 0 18px 40px rgba(0,0,0,.4);
     opacity:0; pointer-events:none;
-    padding:2.5rem 2rem 2.2rem;
+    padding:2.5rem 2rem 3.2rem;
   }
   .card-front.face-visible{ opacity:1; pointer-events:auto; }
   .card-back-emblem{ color:#f4d9a0; opacity:.92; margin-bottom:1rem; }
@@ -302,7 +302,7 @@
   .ten-pull-results[hidden]{ display:none; }
   .pull-tile{
     position:relative;
-    aspect-ratio: 5/7.6;
+    aspect-ratio: 5/8;
     border-radius: 2px;
     overflow:hidden;
     opacity:0;
@@ -313,7 +313,7 @@
   .tile-face{
     position:absolute; inset:0;
     display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.35rem;
-    padding:16% 10% 10%;
+    padding:16% 10% 14%;
     text-align:center;
   }
   .tile-back{
@@ -323,12 +323,13 @@
       repeating-linear-gradient(100deg, rgba(0,0,0,.14) 0 3px, transparent 3px 8px),
       linear-gradient(160deg, #5b3d1c, #2c1c0c);
   }
+  .tile-back-emblem{ color:#f4d9a0; opacity:.92; margin-bottom:.6rem; }
   .tile-back-mark{
-    color:#f4d9a0; font-weight:800; font-size:.8rem; letter-spacing:.25em;
+    color:#f4d9a0; font-weight:800; font-size:1.3rem; letter-spacing:.25em;
     text-shadow: 0 1px 0 rgba(0,0,0,.6);
   }
   .tile-back-hint{
-    color:rgba(244,217,160,.75); font-size:.66rem; letter-spacing:.05em;
+    color:rgba(244,217,160,.75); font-size:1rem; letter-spacing:.05em;
   }
   .pull-tile.flippable{ cursor:pointer; }
   .pull-tile.flippable:hover .tile-back{ filter:brightness(1.15); }
@@ -343,9 +344,10 @@
   .pull-tile h3{
     display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2;
     overflow:hidden; line-clamp:2;
+    line-height:1.25; height:2.5em;
   }
   .pull-tile .addr{
-    display:flex; align-items:baseline; justify-content:center; gap:.4em;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.1em;
   }
   .pull-tile .addr-text{
     display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:1;
@@ -359,6 +361,11 @@
   .pull-tile .caution{
     display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2;
     overflow:hidden; line-clamp:2;
+  }
+  /* a caution box adds real height, so cap desc to 1 line whenever one is present —
+     otherwise both sitting at their own 2-line max can together exceed the card. */
+  .card-front.has-caution .desc, .pull-tile.has-caution .desc{
+    -webkit-line-clamp:1; line-clamp:1;
   }
   @keyframes pull-tile-in{
     from{ opacity:0; transform:translateY(10px) scale(.9); }
@@ -378,13 +385,6 @@
   }
   @media (prefers-reduced-motion: reduce){
     .pull-tile[data-rarity="SSR"]{ animation:none; opacity:1; transform:none; }
-  }
-  @media (max-width: 40rem){
-    .ten-pull-results{ grid-template-columns: repeat(2, minmax(0,1fr)); gap:1rem; }
-    .tile-face{ padding:14% 6% 6%; gap:.3rem; }
-    .pull-tile h3{ font-size:1rem; }
-    .pull-tile .addr, .pull-tile .desc{ font-size:.78rem; }
-    .pull-tile .actions .btn-ghost{ font-size:.72rem; padding:.35rem .7rem; }
   }
   .draw-btn[disabled]:hover{ transform:none; }
 
@@ -409,27 +409,33 @@
   .card-front .card-top-row, .pull-tile .card-top-row{
     display:flex; align-items:center; justify-content:center; gap:.6em;
     margin-bottom:.5rem;
+    flex-shrink:0;
   }
   .card-front .badge, .pull-tile .badge{
     display:inline-flex; align-items:center; justify-content:center;
-    width:1.9rem; height:1.9rem; border-radius:50%;
+    width:2.5rem; height:2.5rem; border-radius:50%;
     background: var(--night); border:2px solid var(--turmeric);
     color: var(--turmeric); font-weight:800; font-size:.78rem;
+    flex-shrink:0;
   }
   .card-front .cat-tag, .pull-tile .cat-tag{
     display:inline-flex; align-items:center; gap:.4em;
     font-size:.7rem; color: var(--ink-dim);
   }
   .card-front .cat-tag .dot, .pull-tile .cat-tag .dot{ width:.55em;height:.55em;border-radius:50%; background:var(--dot,#888); }
-  .card-front h3, .pull-tile h3{ margin:.1rem 0 .4rem; font-size:1.2rem; color: var(--ink); font-family: "Songti TC","PMingLiU","Noto Serif TC",serif; }
-  .card-front .addr, .pull-tile .addr{ font-size:.75rem; color: var(--ink-dim); margin-bottom:.5rem; }
+  .card-front h3, .pull-tile h3{ margin:.1rem 0 .4rem; font-size:1.1rem; color: var(--ink); font-family: "Songti TC","PMingLiU","Noto Serif TC",serif; flex-shrink:0; }
+  .card-front .addr, .pull-tile .addr{ font-size:.75rem; color: var(--ink-dim); margin-bottom:.5rem; flex-shrink:0; }
   .card-front .walk, .pull-tile .walk{ color: var(--turmeric); font-weight:700; }
-  .card-front .desc, .pull-tile .desc{ font-size:.82rem; color: var(--ink); margin-bottom: .7rem; }
+  .card-front .desc, .pull-tile .desc{ font-size:.82rem; color: var(--ink); margin-bottom: .7rem; flex-shrink:0; }
   .card-front .caution, .pull-tile .caution{
     font-size:.68rem; color: var(--turmeric); background: rgba(241,197,111,.1);
     border:1px solid rgba(241,197,111,.3); border-radius:8px; padding:.4rem .6rem; margin-bottom:.7rem;
+    flex-shrink:0;
   }
-  .card-front .actions, .pull-tile .actions{ display:flex; gap:.5rem; justify-content:center; flex-wrap:wrap; }
+  .tile-face.tile-front{ justify-content:flex-start; }
+  .card-front .actions, .pull-tile .actions{ display:flex; gap:.5rem; justify-content:center; flex-wrap:wrap; flex-shrink:0; padding-top:.5rem; }
+  .pull-tile .actions{ margin-top:auto; }
+  .card-front .actions{ margin-top:1rem; }
   .btn-ghost{
     appearance:none; border:1px solid var(--line); background:rgba(42,32,21,.05); color: var(--ink);
     padding:.45rem .9rem; border-radius:999px; font-size:.76rem; cursor:pointer;
@@ -450,5 +456,15 @@
   }
   @media (prefers-reduced-motion: reduce){
     .spark{ display:none; }
+  }
+
+  @media (max-width: 40rem){
+    .ten-pull-results{ grid-template-columns: repeat(2, minmax(0,1fr)); gap:1rem; }
+    .pull-tile{ aspect-ratio: 5/11; }
+    .tile-face{ padding:14% 6% 10%; gap:.3rem; }
+    .pull-tile h3{ font-size:1rem; }
+    .pull-tile .addr, .pull-tile .desc{ font-size:.68rem; }
+    .pull-tile .caution{ font-size:.62rem; }
+    .pull-tile .actions .btn-ghost{ font-size:.72rem; padding:.35rem .7rem; }
   }
 

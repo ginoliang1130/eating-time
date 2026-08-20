@@ -147,7 +147,7 @@
     "name": "手工蛋餅",
     "cat": "lunch",
     "addr": "松江路123巷3號",
-    "desc": "現點現做手工蛋餅，僅平日早上營業。",
+    "desc": "現點現做手工蛋餅。",
     "caution": "招牌不明確，屬口碑推薦",
     "id": 17,
     "rarity": "R",
@@ -292,7 +292,7 @@
     "name": "儂安益麵館（阿田麵）",
     "cat": "lunch",
     "addr": "農安街83號",
-    "desc": "傳承75年古早味陽春乾麵配餛飩湯，中山國小周邊老店。",
+    "desc": "傳承75年古早味陽春乾麵，配餛飩湯。",
     "id": 33,
     "rarity": "R",
     "walkMin": 18
@@ -401,7 +401,7 @@
     "cat": "dessert",
     "addr": "農安街2巷20之33號",
     "desc": "港式甜品，燉奶為招牌。",
-    "caution": "小攤型店家，建議先確認",
+    "caution": "小攤店家，建議先確認",
     "id": 45,
     "rarity": "R",
     "walkMin": 24
@@ -464,8 +464,8 @@
     "name": "犟餐酒館",
     "cat": "dinner",
     "addr": "新生北路一段66號1樓",
-    "desc": "巷弄型餐酒館，下酒菜選擇多。",
-    "caution": "小型餐酒館，建議先確認",
+    "desc": "巷弄餐酒館，下酒菜多。",
+    "caution": "小型餐酒館，先確認",
     "id": 52,
     "rarity": "R",
     "walkMin": 25
@@ -492,8 +492,8 @@
     "name": "森蘭夜食小酒居",
     "cat": "dinner",
     "addr": "民權東路一段12巷15號",
-    "desc": "日式居酒屋，串燒與手作炸物。",
-    "caution": "小型居酒屋，建議先確認",
+    "desc": "日式居酒屋，串燒炸物。",
+    "caution": "小型居酒屋，先確認",
     "id": 55,
     "rarity": "R",
     "walkMin": 20
@@ -520,7 +520,7 @@
     "name": "五湖豆漿",
     "cat": "lunch",
     "addr": "興安街73號",
-    "desc": "興安國宅內的排隊早餐店，蛋餅夾油條、蘿蔔糕人氣款。",
+    "desc": "興安國宅排隊早餐店，蛋餅夾油條人氣款。",
     "id": 58,
     "rarity": "R",
     "walkMin": 17
@@ -583,7 +583,7 @@
     "name": "榮星羊雞城",
     "cat": "dinner",
     "addr": "龍江路367號",
-    "desc": "開業逾30年的全酒羊肉爐老字號，香菇割菜雞也是招牌。",
+    "desc": "開業逾30年全酒羊肉爐老字號。",
     "id": 65,
     "rarity": "R",
     "walkMin": 19
@@ -592,7 +592,7 @@
     "name": "茂園餐廳",
     "cat": "dinner",
     "addr": "長安東路二段185號",
-    "desc": "50年台菜老字號，年年入選米其林必比登，招牌白斬雞。",
+    "desc": "50年台菜老字號，入選米其林必比登。",
     "id": 66,
     "rarity": "SR",
     "walkMin": 29
@@ -763,7 +763,7 @@
     "name": "Fika Fika Cafe",
     "cat": "drink",
     "addr": "伊通街33號1樓",
-    "desc": "北歐風自烘咖啡館，手沖咖啡搭配氣泡水呈現獨特風味。",
+    "desc": "北歐風自烘咖啡館，手沖咖啡風味獨特。",
     "id": 85,
     "rarity": "SSR",
     "walkMin": 16
@@ -817,7 +817,7 @@
     "name": "造糕的人",
     "cat": "dessert",
     "addr": "長安東路一段45之2號2樓",
-    "desc": "復古童趣風手作甜點咖啡廳，必吃戚風蛋糕與燕麥司康。",
+    "desc": "復古童趣風甜點咖啡廳，必吃戚風蛋糕。",
     "id": 91,
     "rarity": "R",
     "walkMin": 26
@@ -850,7 +850,7 @@
     "walkMin": 36
   },
   {
-    "name": "Aposo艾波索法式甜點（南京光復店）",
+    "name": "Aposo艾波索法式甜點",
     "cat": "dessert",
     "addr": "南京東路四段164號",
     "desc": "黑金磚、無限乳酪蛋糕是招牌甜點。",
@@ -924,7 +924,7 @@
   {
     "name": "軟食力",
     "cat": "lunch",
-    "addr": "民權東路二段135巷30弄21號",
+    "addr": "民權東路二段135巷30弄",
     "desc": "台式早午餐，13種粉漿蛋餅口味，米其林必比登推薦。",
     "id": 103,
     "rarity": "R",
@@ -1051,7 +1051,7 @@
     "name": "Classic Milk 松江36",
     "cat": "drink",
     "addr": "松江路36號",
-    "desc": "主打100%新鮮水果現打，木瓜牛奶、綠豆沙牛奶為招牌。",
+    "desc": "主打新鮮水果現打，木瓜牛奶為招牌。",
     "id": 117,
     "rarity": "R",
     "walkMin": 19
@@ -1221,7 +1221,7 @@
   {
     "name": "金仙魯肉飯",
     "cat": "lunch",
-    "addr": "南京東路二段115巷3弄1號之2",
+    "addr": "南京東路二段115巷3弄",
     "desc": "排骨飯、魯肉飯、蝦捲，在地平價快餐店。",
     "id": 136,
     "rarity": "R",
@@ -1284,7 +1284,7 @@
   {
     "name": "四神湯攤",
     "cat": "dinner",
-    "addr": "四平街20巷口（富霸王隔壁）",
+    "addr": "四平街20巷口",
     "desc": "路邊攤，四神湯可選綜合腸或小腸。",
     "id": 143,
     "rarity": "R",
@@ -1392,7 +1392,7 @@
   {
     "name": "家鴻燒鵝",
     "cat": "lunch",
-    "addr": "興安街53-4號（近龍江路口）",
+    "addr": "興安街53-4號",
     "desc": "香港師傅製作燒臘，鵝腿飯為招牌。",
     "id": 155,
     "rarity": "R",
@@ -1779,7 +1779,7 @@
   {
     "name": "MUY 莯以咖啡",
     "cat": "drink",
-    "addr": "民權東路二段135巷30弄20號",
+    "addr": "民權東路二段135巷30弄",
     "desc": "韓風典雅裝潢，適合聚餐約會。",
     "id": 198,
     "rarity": "R",
@@ -1919,5 +1919,1835 @@
     "id": 214,
     "rarity": "R",
     "walkMin": 31
+  },
+  {
+    "name": "茹絲葵美式牛排（台北民生店）",
+    "cat": "dinner",
+    "addr": "民生東路三段135號",
+    "desc": "30年老字號頂級牛排館，招牌濃郁龍蝦湯必點。",
+    "id": 215,
+    "rarity": "SSR",
+    "walkMin": 22
+  },
+  {
+    "name": "夏慕尼新香榭鐵板燒 台北中山北店",
+    "cat": "dinner",
+    "addr": "中山北路二段44號B1",
+    "desc": "王品集團法式鐵板燒，主廚桌邊表演。",
+    "id": 216,
+    "rarity": "SR",
+    "walkMin": 23
+  },
+  {
+    "name": "燒肉眾精緻炭火燒肉 台北吉林店",
+    "cat": "dinner",
+    "addr": "吉林路181號1F",
+    "desc": "居酒屋氛圍炭火燒肉吃到飽，加價享A5和牛。",
+    "id": 217,
+    "rarity": "SR",
+    "walkMin": 8
+  },
+  {
+    "name": "御書園食尚牛排",
+    "cat": "dinner",
+    "addr": "松江路206號2樓",
+    "desc": "Google評分4.2★（4.2千則評論）。",
+    "id": 218,
+    "rarity": "R",
+    "walkMin": 2
+  },
+  {
+    "name": "東輝韓食館",
+    "cat": "dinner",
+    "addr": "松江路259巷29號1樓",
+    "desc": "Google評分4.1★（2.1千則評論）。",
+    "id": 219,
+    "rarity": "R",
+    "walkMin": 4
+  },
+  {
+    "name": "唐宮蒙古烤肉酸菜白肉餐廳",
+    "cat": "dinner",
+    "addr": "松江路283號2樓",
+    "desc": "Google評分3.9★（5.2千則評論）。",
+    "id": 220,
+    "rarity": "R",
+    "walkMin": 3
+  },
+  {
+    "name": "儂來餐廳",
+    "cat": "dinner",
+    "addr": "民生東路二段147巷11弄1號",
+    "desc": "Google評分4.2★（3.6千則評論）。",
+    "id": 221,
+    "rarity": "R",
+    "walkMin": 4
+  },
+  {
+    "name": "すき家台北行天宮",
+    "cat": "dinner",
+    "addr": "松江路303號",
+    "desc": "Google評分3.2★（459則評論）。",
+    "id": 222,
+    "rarity": "R",
+    "walkMin": 5
+  },
+  {
+    "name": "這一鍋 台北吉林殿",
+    "cat": "dinner",
+    "addr": "吉林路190號",
+    "desc": "人氣鍋物連鎖，湯頭選擇多樣，高評價常客回訪率高。",
+    "id": 223,
+    "rarity": "SR",
+    "walkMin": 6
+  },
+  {
+    "name": "面對面",
+    "cat": "dinner",
+    "addr": "錦州街310號",
+    "desc": "Google評分4.2★（2.3千則評論）。",
+    "id": 224,
+    "rarity": "R",
+    "walkMin": 9
+  },
+  {
+    "name": "大戈壁蒙古烤肉-松江創始店",
+    "cat": "dinner",
+    "addr": "松江路152號3樓",
+    "desc": "Google評分4.1★（9.9千則評論）。",
+    "id": 225,
+    "rarity": "R",
+    "walkMin": 8
+  },
+  {
+    "name": "REEDS PIZZERIA 民權店",
+    "cat": "dinner",
+    "addr": "民權東路二段107號",
+    "desc": "Google評分4.1★（219則評論）。",
+    "id": 226,
+    "rarity": "R",
+    "walkMin": 8
+  },
+  {
+    "name": "1985窯烤披薩",
+    "cat": "dinner",
+    "addr": "合江街100之1號",
+    "desc": "在地口碑極佳，Google評分4.8★（2.1千+則評論）。",
+    "id": 227,
+    "rarity": "R",
+    "walkMin": 9
+  },
+  {
+    "name": "猓玀苑",
+    "cat": "dinner",
+    "addr": "興安街40號",
+    "desc": "Google評分4.4★，2.2千+則評論，在地人氣選擇。",
+    "id": 228,
+    "rarity": "R",
+    "walkMin": 11
+  },
+  {
+    "name": "養心茶樓 蔬食飲茶",
+    "cat": "dinner",
+    "addr": "松江路128號2樓",
+    "desc": "Google評分4.3★，8.7千+則評論，在地人氣選擇。",
+    "id": 229,
+    "rarity": "R",
+    "walkMin": 10
+  },
+  {
+    "name": "一福IPPUKU串燒酒場",
+    "cat": "dinner",
+    "addr": "四平街2號",
+    "desc": "Google評分4.4★，549+則評論，在地人氣選擇。",
+    "id": 230,
+    "rarity": "R",
+    "walkMin": 12
+  },
+  {
+    "name": "UNCLE-K 排骨火鍋店",
+    "cat": "dinner",
+    "addr": "合江街188巷1號",
+    "desc": "排骨酥火鍋專門店，湯頭濃郁，在地評價極高。",
+    "id": 231,
+    "rarity": "SR",
+    "walkMin": 13
+  },
+  {
+    "name": "小品雅廚",
+    "cat": "dinner",
+    "addr": "中原街130號",
+    "desc": "Google評分4★（1.9千則評論）。",
+    "id": 232,
+    "rarity": "R",
+    "walkMin": 14
+  },
+  {
+    "name": "Tempo House Restaurant & Bar",
+    "cat": "dinner",
+    "addr": "建國北路二段12號",
+    "desc": "在地口碑極佳，Google評分4.8★（511+則評論）。",
+    "id": 233,
+    "rarity": "R",
+    "walkMin": 13
+  },
+  {
+    "name": "蔬軾",
+    "cat": "dinner",
+    "addr": "農安街263號",
+    "desc": "在地口碑極佳，Google評分4.8★（3.2千+則評論）。",
+    "id": 234,
+    "rarity": "R",
+    "walkMin": 13
+  },
+  {
+    "name": "丰禾 台味風格料理 台北南京東店",
+    "cat": "dinner",
+    "addr": "南京東路二段146號2F",
+    "desc": "台味風格料理，擺盤精緻，評分4.7星。",
+    "id": 235,
+    "rarity": "SR",
+    "walkMin": 12
+  },
+  {
+    "name": "丸滿台灣味手路菜",
+    "cat": "dinner",
+    "addr": "林森北路353巷21號",
+    "desc": "Google評分4.3★，1.8千+則評論，在地人氣選擇。",
+    "id": 236,
+    "rarity": "R",
+    "walkMin": 15
+  },
+  {
+    "name": "すき家南京伊通",
+    "cat": "dinner",
+    "addr": "南京東路二段178-1號",
+    "desc": "Google評分3.8★（2.2千則評論）。",
+    "id": 237,
+    "rarity": "R",
+    "walkMin": 14
+  },
+  {
+    "name": "六扇門時尚鍋物-中山農安店",
+    "cat": "dinner",
+    "addr": "農安街273號",
+    "desc": "Google評分4.2★（1.2千則評論）。",
+    "id": 238,
+    "rarity": "R",
+    "walkMin": 14
+  },
+  {
+    "name": "泰滾 Rolling Thai 泰式火鍋(南京店）",
+    "cat": "dinner",
+    "addr": "南京東路二段178號B1",
+    "desc": "Google評分4.6★，6.3千+則評論，在地人氣選擇。",
+    "id": 239,
+    "rarity": "R",
+    "walkMin": 14
+  },
+  {
+    "name": "桂公子酒館",
+    "cat": "dinner",
+    "addr": "民生東路一段37號B1",
+    "desc": "Google評分4.4★，798+則評論，在地人氣選擇。",
+    "id": 240,
+    "rarity": "R",
+    "walkMin": 13
+  },
+  {
+    "name": "Bar Yoshi 梄時",
+    "cat": "dinner",
+    "addr": "建國北路二段3巷2-1號",
+    "desc": "在地口碑極佳，Google評分4.9★（443+則評論）。",
+    "id": 241,
+    "rarity": "R",
+    "walkMin": 15
+  },
+  {
+    "name": "拿坡里披薩 龍江店",
+    "cat": "dinner",
+    "addr": "龍江路303號",
+    "desc": "Google評分4.1★（949則評論）。",
+    "id": 242,
+    "rarity": "R",
+    "walkMin": 14
+  },
+  {
+    "name": "Pasta & Co.",
+    "cat": "dinner",
+    "addr": "南京東路三段9號",
+    "desc": "Google評分4.4★，4.2千+則評論，在地人氣選擇。",
+    "id": 243,
+    "rarity": "R",
+    "walkMin": 16
+  },
+  {
+    "name": "老四川巴蜀麻辣燙 台北南京店",
+    "cat": "dinner",
+    "addr": "南京東路二段45號",
+    "desc": "Google評分4.5★，7.6千+則評論，在地人氣選擇。",
+    "id": 244,
+    "rarity": "R",
+    "walkMin": 16
+  },
+  {
+    "name": "雞家莊本店",
+    "cat": "dinner",
+    "addr": "長春路55號",
+    "desc": "Google評分4.2★（4.7千則評論）。",
+    "id": 245,
+    "rarity": "R",
+    "walkMin": 17
+  },
+  {
+    "name": "噶瑪蘭威士忌酒吧",
+    "cat": "dinner",
+    "addr": "南京東路二段1號2樓",
+    "desc": "在地口碑極佳，Google評分4.7★（659+則評論）。",
+    "id": 246,
+    "rarity": "R",
+    "walkMin": 18
+  },
+  {
+    "name": "點爭鮮 林森店",
+    "cat": "dinner",
+    "addr": "長春路40號2F",
+    "desc": "Google評分4.2★（2千則評論）。",
+    "id": 247,
+    "rarity": "R",
+    "walkMin": 10
+  },
+  {
+    "name": "大和日本料理",
+    "cat": "dinner",
+    "addr": "錦州街17號",
+    "desc": "Google評分4.3★，3.7千+則評論，在地人氣選擇。",
+    "id": 248,
+    "rarity": "R",
+    "walkMin": 17
+  },
+  {
+    "name": "三井日式料理",
+    "cat": "dinner",
+    "addr": "農安街34號",
+    "desc": "高級無菜單日料，散壽司魚料豪邁澎湃。",
+    "id": 249,
+    "rarity": "SSR",
+    "walkMin": 20
+  },
+  {
+    "name": "爭鮮迴轉壽司-林森店",
+    "cat": "dinner",
+    "addr": "中山北路二段45巷35號",
+    "desc": "Google評分4.3★，6千+則評論，在地人氣選擇。",
+    "id": 250,
+    "rarity": "R",
+    "walkMin": 20
+  },
+  {
+    "name": "雞湯榮麵食館",
+    "cat": "dinner",
+    "addr": "錦州街14號",
+    "desc": "Google評分4.2★（1.4千則評論）。",
+    "id": 251,
+    "rarity": "R",
+    "walkMin": 17
+  },
+  {
+    "name": "BELLINI CAFFE 台北復興店",
+    "cat": "dinner",
+    "addr": "復興北路288號",
+    "desc": "Google評分4.4★，2.6千+則評論，在地人氣選擇。",
+    "id": 252,
+    "rarity": "R",
+    "walkMin": 17
+  },
+  {
+    "name": "宣牛溫體牛肉火鍋(復興店",
+    "cat": "dinner",
+    "addr": "復興北路292號",
+    "desc": "Google評分4.6★，2.5千+則評論，在地人氣選擇。",
+    "id": 253,
+    "rarity": "R",
+    "walkMin": 17
+  },
+  {
+    "name": "吉星港式飲茶",
+    "cat": "dinner",
+    "addr": "南京東路一段92號2樓",
+    "desc": "Google評分4.1★（13.9千則評論）。",
+    "id": 254,
+    "rarity": "R",
+    "walkMin": 21
+  },
+  {
+    "name": "逐愛轉運站 放感情餐酒館",
+    "cat": "dinner",
+    "addr": "中山北路二段39巷20號",
+    "desc": "在地口碑極佳，Google評分4.7★（1.3千+則評論）。",
+    "id": 255,
+    "rarity": "R",
+    "walkMin": 21
+  },
+  {
+    "name": "ABV Bar & Kitchen 台北中山店",
+    "cat": "dinner",
+    "addr": "中山北路二段39巷16之2號",
+    "desc": "Google評分4.6★，2.6千+則評論，在地人氣選擇。",
+    "id": 256,
+    "rarity": "R",
+    "walkMin": 21
+  },
+  {
+    "name": "屏東双園火鍋",
+    "cat": "dinner",
+    "addr": "建國北路三段113巷35號",
+    "desc": "Google評分4.3★，875+則評論，在地人氣選擇。",
+    "id": 257,
+    "rarity": "R",
+    "walkMin": 18
+  },
+  {
+    "name": "CEO1950 總裁藝文空間",
+    "cat": "dinner",
+    "addr": "新生北路三段62巷24號",
+    "desc": "央行前總裁70年老宅改建，米其林指南推薦。",
+    "id": 258,
+    "rarity": "SSR",
+    "walkMin": 22
+  },
+  {
+    "name": "C PARK Re:Creation",
+    "cat": "dinner",
+    "addr": "南京東路一段13巷7弄11號",
+    "desc": "Google評分4.5★，1.4千+則評論，在地人氣選擇。",
+    "id": 259,
+    "rarity": "R",
+    "walkMin": 21
+  },
+  {
+    "name": "鷲 炎鹽串燒 居酒屋",
+    "cat": "dinner",
+    "addr": "中山北路二段137巷1號",
+    "desc": "在地口碑極佳，Google評分4.9★（3.5千+則評論）。",
+    "id": 260,
+    "rarity": "R",
+    "walkMin": 20
+  },
+  {
+    "name": "金品茶樓",
+    "cat": "dinner",
+    "addr": "長春路16號",
+    "desc": "Google評分4.1★（3.4千則評論）。",
+    "id": 261,
+    "rarity": "R",
+    "walkMin": 20
+  },
+  {
+    "name": "炭炙郎TANJIROU 串燒X啜飲",
+    "cat": "dinner",
+    "addr": "龍江路350號",
+    "desc": "在地口碑極佳，Google評分4.7★（96+則評論）。",
+    "id": 262,
+    "rarity": "R",
+    "walkMin": 21
+  },
+  {
+    "name": "すき家Sukiya 復興民權店",
+    "cat": "dinner",
+    "addr": "復興北路400號",
+    "desc": "Google評分3.5★（691則評論）。",
+    "id": 263,
+    "rarity": "R",
+    "walkMin": 20
+  },
+  {
+    "name": "新東羊 羊肉料理專賣店",
+    "cat": "dinner",
+    "addr": "龍江路356巷11號",
+    "desc": "Google評分4.1★（3.5千則評論）。",
+    "id": 264,
+    "rarity": "R",
+    "walkMin": 21
+  },
+  {
+    "name": "呵酒smilewine/民族門市",
+    "cat": "dinner",
+    "addr": "民族東路190號",
+    "desc": "在地口碑極佳，Google評分5★（7+則評論）。",
+    "id": 265,
+    "rarity": "R",
+    "walkMin": 20
+  },
+  {
+    "name": "馬友友印度廚房 - 民生東路",
+    "cat": "dinner",
+    "addr": "民生東路三段103號",
+    "desc": "道地印度料理，咖哩與坦都烤餅選擇豐富。",
+    "id": 266,
+    "rarity": "SR",
+    "walkMin": 16
+  },
+  {
+    "name": "人和園餐廳",
+    "cat": "dinner",
+    "addr": "中山北路二段112號2樓",
+    "desc": "Google評分4.4★，2.5千+則評論，在地人氣選擇。",
+    "id": 267,
+    "rarity": "R",
+    "walkMin": 20
+  },
+  {
+    "name": "金豬食堂",
+    "cat": "dinner",
+    "addr": "南京東路一段29號",
+    "desc": "Google評分4.3★，1.2千+則評論，在地人氣選擇。",
+    "id": 268,
+    "rarity": "R",
+    "walkMin": 23
+  },
+  {
+    "name": "Ｗonder bar",
+    "cat": "dinner",
+    "addr": "復興北路183號1樓",
+    "desc": "Google評分4.6★，882+則評論，在地人氣選擇。",
+    "id": 269,
+    "rarity": "R",
+    "walkMin": 21
+  },
+  {
+    "name": "The Brass Monkey 銅猴子復興店",
+    "cat": "dinner",
+    "addr": "復興北路166號",
+    "desc": "Google評分4.1★（3.1千則評論）。",
+    "id": 270,
+    "rarity": "R",
+    "walkMin": 22
+  },
+  {
+    "name": "壽喜燒一丁二代目- 雙城店",
+    "cat": "dinner",
+    "addr": "雙城街12-4號晴光市場內",
+    "desc": "Google評分4.1★（2.6千則評論）。",
+    "id": 271,
+    "rarity": "R",
+    "walkMin": 23
+  },
+  {
+    "name": "晴光市場",
+    "cat": "dinner",
+    "addr": "雙城街12-4號",
+    "desc": "Google評分4.4★，115+則評論，在地人氣選擇。",
+    "id": 272,
+    "rarity": "R",
+    "walkMin": 23
+  },
+  {
+    "name": "杭州小籠湯包 民生旗艦店",
+    "cat": "dinner",
+    "addr": "民生東路三段118號",
+    "desc": "Google評分4.1★（2.7千則評論）。",
+    "id": 273,
+    "rarity": "R",
+    "walkMin": 18
+  },
+  {
+    "name": "維傑 印度餐廳",
+    "cat": "dinner",
+    "addr": "復興北路432號1樓",
+    "desc": "印度籍店員坐鎮，招牌坦都烤雞道地正宗。",
+    "id": 274,
+    "rarity": "SR",
+    "walkMin": 23
+  },
+  {
+    "name": "好食多涮涮鍋 雙城店",
+    "cat": "dinner",
+    "addr": "雙城街19巷5號",
+    "desc": "Google評分4.6★，6千+則評論，在地人氣選擇。",
+    "id": 275,
+    "rarity": "R",
+    "walkMin": 24
+  },
+  {
+    "name": "又一間商行SPAGHETTI",
+    "cat": "dinner",
+    "addr": "興安街192號",
+    "desc": "評分4.4★，在地人氣選擇。",
+    "id": 276,
+    "rarity": "R",
+    "walkMin": 20,
+    "caution": "無訂位，建議提早到場"
+  },
+  {
+    "name": "陶板屋 台北復興北店",
+    "cat": "dinner",
+    "addr": "復興北路375號",
+    "desc": "Google評分4.6★，6.1千+則評論，在地人氣選擇。",
+    "id": 277,
+    "rarity": "R",
+    "walkMin": 23
+  },
+  {
+    "name": "臨洋港生猛活海鮮長安店",
+    "cat": "dinner",
+    "addr": "長安東路一段99號",
+    "desc": "Google評分4.1★（4.3千則評論）。",
+    "id": 278,
+    "rarity": "R",
+    "walkMin": 23
+  },
+  {
+    "name": "躼腳日式料理",
+    "cat": "dinner",
+    "addr": "民權東路三段107號",
+    "desc": "Google評分4.1★（2.8千則評論）。",
+    "id": 279,
+    "rarity": "R",
+    "walkMin": 23
+  },
+  {
+    "name": "韓時代 한 시 대-韓國烤肉吃到飽",
+    "cat": "dinner",
+    "addr": "松江路32-1號",
+    "desc": "Google評分4.5★，2.8千+則評論，在地人氣選擇。",
+    "id": 280,
+    "rarity": "R",
+    "walkMin": 19
+  },
+  {
+    "name": "阿財蔬菜羊肉爐",
+    "cat": "dinner",
+    "addr": "長安東路一段58號",
+    "desc": "Google評分4.4★，2.4千+則評論，在地人氣選擇。",
+    "id": 281,
+    "rarity": "R",
+    "walkMin": 23
+  },
+  {
+    "name": "麵屋 千雲 林森店",
+    "cat": "dinner",
+    "addr": "林森北路105-1號",
+    "desc": "Google評分4.6★，13.4千+則評論，在地人氣選擇。",
+    "id": 282,
+    "rarity": "R",
+    "walkMin": 25
+  },
+  {
+    "name": "鮮定味生猛活海鮮",
+    "cat": "dinner",
+    "addr": "長安東路一段67號",
+    "desc": "Google評分4★（3.7千則評論）。",
+    "id": 283,
+    "rarity": "R",
+    "walkMin": 25
+  },
+  {
+    "name": "十得私廚-台菜料理",
+    "cat": "dinner",
+    "addr": "中山北路二段185號2樓",
+    "desc": "Google評分4.4★，2千+則評論，在地人氣選擇。",
+    "id": 284,
+    "rarity": "R",
+    "walkMin": 24
+  },
+  {
+    "name": "はま寿司 中山民權店",
+    "cat": "dinner",
+    "addr": "中山北路二段185號",
+    "desc": "Google評分3.7★（6.8千則評論）。",
+    "id": 285,
+    "rarity": "R",
+    "walkMin": 24
+  },
+  {
+    "name": "加分昆布鍋物-食べ放題-新生店",
+    "cat": "dinner",
+    "addr": "新生北路一段90號",
+    "desc": "在地口碑極佳，Google評分4.7★（1.6千+則評論）。",
+    "id": 286,
+    "rarity": "R",
+    "walkMin": 23
+  },
+  {
+    "name": "海底撈火鍋 慶城店",
+    "cat": "dinner",
+    "addr": "慶城街1號3F",
+    "desc": "中國知名連鎖火鍋，以貼心服務聞名。",
+    "id": 287,
+    "rarity": "SR",
+    "walkMin": 52
+  },
+  {
+    "name": "庸人串燒 松江本店",
+    "cat": "dinner",
+    "addr": "松江路22號1樓",
+    "desc": "在地口碑極佳，Google評分4.7★（718+則評論）。",
+    "id": 288,
+    "rarity": "R",
+    "walkMin": 20
+  },
+  {
+    "name": "龍都酒樓 中山總店",
+    "cat": "dinner",
+    "addr": "中山北路一段105巷18-1號",
+    "desc": "40年港式老字號，招牌脆皮烤鴨一鴨三吃。",
+    "id": 289,
+    "rarity": "SR",
+    "walkMin": 26
+  },
+  {
+    "name": "鎏 LIÚ｜MyHome Grill × Buddha Bar",
+    "cat": "dinner",
+    "addr": "復興北路477號1F",
+    "desc": "Google評分4.1★（183則評論）。",
+    "id": 290,
+    "rarity": "R",
+    "walkMin": 26
+  },
+  {
+    "name": "批薩謎勒 Happy Buddha Pizza",
+    "cat": "dinner",
+    "addr": "雙城街18巷16號",
+    "desc": "在地口碑極佳，Google評分4.7★（1.1千+則評論）。",
+    "id": 291,
+    "rarity": "R",
+    "walkMin": 26
+  },
+  {
+    "name": "欣葉台菜創始店",
+    "cat": "dinner",
+    "addr": "雙城街34之1號",
+    "desc": "Google評分4.2★（6.4千則評論）。",
+    "id": 292,
+    "rarity": "R",
+    "walkMin": 26
+  },
+  {
+    "name": "下港吔羊肉專賣店",
+    "cat": "dinner",
+    "addr": "天祥路18號",
+    "desc": "Google評分4.3★，5.6千+則評論，在地人氣選擇。",
+    "id": 293,
+    "rarity": "R",
+    "walkMin": 23
+  },
+  {
+    "name": "海九澎湖海鮮餐廳",
+    "cat": "dinner",
+    "addr": "長安東路二段170號",
+    "desc": "全台最新鮮活海鮮之一，澎湖直送現撈。",
+    "id": 294,
+    "rarity": "SSR",
+    "walkMin": 25
+  },
+  {
+    "name": "青花驕麻辣鍋 台北中山北店",
+    "cat": "dinner",
+    "addr": "中山北路一段137號",
+    "desc": "高評價川味麻辣鍋連鎖，湯頭香辣夠味。",
+    "id": 295,
+    "rarity": "SR",
+    "walkMin": 27
+  },
+  {
+    "name": "HOOTERS美式餐廳 慶城店",
+    "cat": "dinner",
+    "addr": "慶城街18號",
+    "desc": "Google評分4.5★，7.9千+則評論，在地人氣選擇。",
+    "id": 296,
+    "rarity": "R",
+    "walkMin": 25
+  },
+  {
+    "name": "莎瓦迪卡海鮮.泰",
+    "cat": "dinner",
+    "addr": "松江路8號",
+    "desc": "泰式海鮮料理，酸辣夠勁，評分逼近滿分。",
+    "id": 297,
+    "rarity": "SR",
+    "walkMin": 20
+  },
+  {
+    "name": "Book ing 中山",
+    "cat": "dinner",
+    "addr": "民生西路78號2樓之4",
+    "desc": "在地口碑極佳，評分4.9★。",
+    "id": 298,
+    "rarity": "R",
+    "walkMin": 22,
+    "caution": "進不來請打電話"
+  },
+  {
+    "name": "Bottless 非瓶",
+    "cat": "dinner",
+    "addr": "慶城街26-1號",
+    "desc": "米其林一星主廚打造，新派美式餐酒館。",
+    "id": 299,
+    "rarity": "SR",
+    "walkMin": 52
+  },
+  {
+    "name": "紅屋牛排館民生店",
+    "cat": "dinner",
+    "addr": "民生東路三段119號",
+    "desc": "Google評分4.5★，2.9千+則評論，在地人氣選擇。",
+    "id": 300,
+    "rarity": "R",
+    "walkMin": 20
+  },
+  {
+    "name": "隱家拉麵 赤峰店",
+    "cat": "dinner",
+    "addr": "南京西路25巷28號",
+    "desc": "Google評分4.3★，4千+則評論，在地人氣選擇。",
+    "id": 301,
+    "rarity": "R",
+    "walkMin": 29
+  },
+  {
+    "name": "海真私房菜民生店",
+    "cat": "dinner",
+    "addr": "民生東路三段130巷7弄15號",
+    "desc": "Google評分4.1★（2.2千則評論）。",
+    "id": 302,
+    "rarity": "R",
+    "walkMin": 52
+  },
+  {
+    "name": "有有1969",
+    "cat": "dinner",
+    "addr": "遼寧街48號",
+    "desc": "Google評分4.3★，1.6千+則評論，在地人氣選擇。",
+    "id": 303,
+    "rarity": "R",
+    "walkMin": 26
+  },
+  {
+    "name": "大師兄銷魂麵舖-中山店",
+    "cat": "dinner",
+    "addr": "中山北路二段42巷36號",
+    "desc": "Google評分4.2★（5.9千則評論）。",
+    "id": 304,
+    "rarity": "R",
+    "walkMin": 25
+  },
+  {
+    "name": "UR LIVING生活美學｜南西一店",
+    "cat": "dinner",
+    "addr": "中山北路二段16巷12號",
+    "desc": "Google評分4.3★，676+則評論，在地人氣選擇。",
+    "id": 305,
+    "rarity": "R",
+    "walkMin": 27
+  },
+  {
+    "name": "Draft Land Zhongshan",
+    "cat": "dinner",
+    "addr": "中山北路二段16巷14號",
+    "desc": "Google評分4.3★，260+則評論，在地人氣選擇。",
+    "id": 306,
+    "rarity": "R",
+    "walkMin": 27
+  },
+  {
+    "name": "Green Door Bar 綠門 老酒吧",
+    "cat": "dinner",
+    "addr": "德惠街6-1號號1樓",
+    "desc": "Google評分4.4★，754+則評論，在地人氣選擇。",
+    "id": 307,
+    "rarity": "R",
+    "walkMin": 28
+  },
+  {
+    "name": "螺絲瑪莉義麵坊",
+    "cat": "dinner",
+    "addr": "南京西路12巷13弄9號",
+    "desc": "Google評分4.3★，9.1千+則評論，在地人氣選擇。",
+    "id": 308,
+    "rarity": "R",
+    "walkMin": 29
+  },
+  {
+    "name": "四米大石鍋拌飯專賣",
+    "cat": "dinner",
+    "addr": "中山北路二段20巷23號2樓",
+    "desc": "Google評分4.5★，4.3千+則評論，在地人氣選擇。",
+    "id": 309,
+    "rarity": "R",
+    "walkMin": 27
+  },
+  {
+    "name": "不葷主義茶餐廳 台北店",
+    "cat": "dinner",
+    "addr": "南京東路三段275號2樓",
+    "desc": "素食界的鼎泰豐。",
+    "id": 310,
+    "rarity": "SR",
+    "walkMin": 26,
+    "caution": "僅收現金，建議先訂位"
+  },
+  {
+    "name": "Cin Cin Osteria請請義式餐廳",
+    "cat": "dinner",
+    "addr": "慶城街16巷16號1F",
+    "desc": "Google評分4.3★，5.3千+則評論，在地人氣選擇。",
+    "id": 311,
+    "rarity": "R",
+    "walkMin": 26
+  },
+  {
+    "name": "丸林魯肉飯",
+    "cat": "dinner",
+    "addr": "民族東路32號",
+    "desc": "Google評分3.9★（4.7千則評論）。",
+    "id": 312,
+    "rarity": "R",
+    "walkMin": 28
+  },
+  {
+    "name": "Second Floor 貳樓中山南西店",
+    "cat": "dinner",
+    "addr": "中山北路二段16巷22號",
+    "desc": "Google評分4.4★，3.5千+則評論，在地人氣選擇。",
+    "id": 313,
+    "rarity": "R",
+    "walkMin": 27
+  },
+  {
+    "name": "春美冰菓室慶城本店",
+    "cat": "dinner",
+    "addr": "敦化北路120巷54號",
+    "desc": "Google評分4.3★，3.1千+則評論，在地人氣選擇。",
+    "id": 314,
+    "rarity": "R",
+    "walkMin": 25
+  },
+  {
+    "name": "Texas Roadhouse 德州鮮切牛排 民生店",
+    "cat": "dinner",
+    "addr": "民生東路三段156號1F",
+    "desc": "美式牛排連鎖，現切牛排配招牌肉桂奶油小餐包。",
+    "id": 315,
+    "rarity": "SR",
+    "walkMin": 21
+  },
+  {
+    "name": "馬友友印度餐廳酒吧+水煙館",
+    "cat": "dinner",
+    "addr": "松江路1-1號",
+    "desc": "在地口碑極佳，Google評分4.7★（2.9千+則評論）。",
+    "id": 316,
+    "rarity": "R",
+    "walkMin": 21
+  },
+  {
+    "name": "F Gallery by A Train",
+    "cat": "dinner",
+    "addr": "南京東路三段276號2樓",
+    "desc": "Google評分4.3★，912+則評論，在地人氣選擇。",
+    "id": 317,
+    "rarity": "R",
+    "walkMin": 28
+  },
+  {
+    "name": "鼎泰豐 南西店",
+    "cat": "dinner",
+    "addr": "南京西路12號B2",
+    "desc": "Google評分4.4★，8.2千+則評論，在地人氣選擇。",
+    "id": 318,
+    "rarity": "R",
+    "walkMin": 29
+  },
+  {
+    "name": "黃金麵線",
+    "cat": "dinner",
+    "addr": "民權東路三段160巷15號",
+    "desc": "Google評分4.5★，3千+則評論，在地人氣選擇。",
+    "id": 319,
+    "rarity": "R",
+    "walkMin": 26
+  },
+  {
+    "name": "池音 雞白湯ラーメン",
+    "cat": "dinner",
+    "addr": "赤峰街23巷25號",
+    "desc": "Google評分4.5★，2.1千+則評論，在地人氣選擇。",
+    "id": 320,
+    "rarity": "R",
+    "walkMin": 28
+  },
+  {
+    "name": "韓食堂한식당",
+    "cat": "dinner",
+    "addr": "南京東路三段303巷3弄4號",
+    "desc": "Google評分4.1★（2.3千則評論）。",
+    "id": 321,
+    "rarity": "R",
+    "walkMin": 28
+  },
+  {
+    "name": "犂園湯包館",
+    "cat": "dinner",
+    "addr": "南京東路三段256巷24號",
+    "desc": "Google評分4.2★（4千則評論）。",
+    "id": 322,
+    "rarity": "R",
+    "walkMin": 27
+  },
+  {
+    "name": "A Train - A Cozy Vibe for You",
+    "cat": "dinner",
+    "addr": "八德路二段233號2樓",
+    "desc": "Google評分4.6★，1.5千+則評論，在地人氣選擇。",
+    "id": 323,
+    "rarity": "R",
+    "walkMin": 28
+  },
+  {
+    "name": "螺螄福Rose food正宗柳州螺螄粉",
+    "cat": "dinner",
+    "addr": "赤峰街14-1號",
+    "desc": "Google評分4.6★，5.3千+則評論，在地人氣選擇。",
+    "id": 324,
+    "rarity": "R",
+    "walkMin": 28
+  },
+  {
+    "name": "麒麟創作拉麵坊",
+    "cat": "dinner",
+    "addr": "中山北路一段140巷25號1樓",
+    "desc": "在地口碑極佳，Google評分4.7★（2.7千+則評論）。",
+    "id": 325,
+    "rarity": "R",
+    "walkMin": 30
+  },
+  {
+    "name": "田園海鮮餐廳",
+    "cat": "dinner",
+    "addr": "八德路二段174巷5號",
+    "desc": "Google評分4.3★，3.8千+則評論，在地人氣選擇。",
+    "id": 326,
+    "rarity": "R",
+    "walkMin": 27
+  },
+  {
+    "name": "北平萬珍樓美食餐廳",
+    "cat": "dinner",
+    "addr": "敦化北路120巷11號",
+    "desc": "Google評分4.2★（1.6千則評論）。",
+    "id": 327,
+    "rarity": "R",
+    "walkMin": 26
+  },
+  {
+    "name": "廚房客家美食",
+    "cat": "dinner",
+    "addr": "敦化北路120巷20號",
+    "desc": "Google評分4★（1.1千則評論）。",
+    "id": 328,
+    "rarity": "R",
+    "walkMin": 26
+  },
+  {
+    "name": "海霸王 中山店",
+    "cat": "dinner",
+    "addr": "中山北路三段59號",
+    "desc": "Google評分3.8★（10.6千則評論）。",
+    "id": 329,
+    "rarity": "R",
+    "walkMin": 32
+  },
+  {
+    "name": "Night 'n Day Bar & Bistro",
+    "cat": "dinner",
+    "addr": "八德路二段343號1樓",
+    "desc": "在地口碑極佳，Google評分4.8★（598+則評論）。",
+    "id": 330,
+    "rarity": "R",
+    "walkMin": 32
+  },
+  {
+    "name": "林東芳牛肉麵",
+    "cat": "dinner",
+    "addr": "八德路二段322號",
+    "desc": "Google評分3.8★（12.5千則評論）。",
+    "id": 331,
+    "rarity": "R",
+    "walkMin": 32
+  },
+  {
+    "name": "SipSip Bar & Restaurant",
+    "cat": "dinner",
+    "addr": "八德路一段1號中四D館1F-1",
+    "desc": "Google評分4.3★，808+則評論，在地人氣選擇。",
+    "id": 332,
+    "rarity": "R",
+    "walkMin": 30
+  },
+  {
+    "name": "川畝園麵食館",
+    "cat": "dinner",
+    "addr": "承德路二段120號1樓",
+    "desc": "Google評分4.3★，2.4千+則評論，在地人氣選擇。",
+    "id": 333,
+    "rarity": "R",
+    "walkMin": 28
+  },
+  {
+    "name": "阿桐阿寶四神湯",
+    "cat": "dinner",
+    "addr": "民生西路153號",
+    "desc": "Google評分3.9★（8.3千則評論）。",
+    "id": 334,
+    "rarity": "R",
+    "walkMin": 26
+  },
+  {
+    "name": "御書園食尚牛排",
+    "cat": "lunch",
+    "addr": "松江路206號2樓",
+    "desc": "Google評分4.2★（4.2千則評論）。",
+    "id": 335,
+    "rarity": "R",
+    "walkMin": 2
+  },
+  {
+    "name": "東輝韓食館",
+    "cat": "lunch",
+    "addr": "松江路259巷29號1樓",
+    "desc": "Google評分4.1★（2.1千則評論）。",
+    "id": 336,
+    "rarity": "R",
+    "walkMin": 4
+  },
+  {
+    "name": "唐宮蒙古烤肉酸菜白肉餐廳",
+    "cat": "lunch",
+    "addr": "松江路283號2樓",
+    "desc": "Google評分3.9★（5.2千則評論）。",
+    "id": 337,
+    "rarity": "R",
+    "walkMin": 3
+  },
+  {
+    "name": "儂來餐廳",
+    "cat": "lunch",
+    "addr": "民生東路二段147巷11弄1號",
+    "desc": "Google評分4.2★（3.6千則評論）。",
+    "id": 338,
+    "rarity": "R",
+    "walkMin": 4
+  },
+  {
+    "name": "すき家台北行天宮",
+    "cat": "lunch",
+    "addr": "松江路303號",
+    "desc": "Google評分3.2★（459則評論）。",
+    "id": 339,
+    "rarity": "R",
+    "walkMin": 5
+  },
+  {
+    "name": "這一鍋 台北吉林殿",
+    "cat": "lunch",
+    "addr": "吉林路190號",
+    "desc": "人氣鍋物連鎖，湯頭選擇多樣，高評價常客回訪率高。",
+    "id": 340,
+    "rarity": "SR",
+    "walkMin": 6
+  },
+  {
+    "name": "面對面",
+    "cat": "lunch",
+    "addr": "錦州街310號",
+    "desc": "Google評分4.2★（2.3千則評論）。",
+    "id": 341,
+    "rarity": "R",
+    "walkMin": 9
+  },
+  {
+    "name": "大戈壁蒙古烤肉-松江創始店",
+    "cat": "lunch",
+    "addr": "松江路152號3樓",
+    "desc": "Google評分4.1★（9.9千則評論）。",
+    "id": 342,
+    "rarity": "R",
+    "walkMin": 8
+  },
+  {
+    "name": "1985窯烤披薩",
+    "cat": "lunch",
+    "addr": "合江街100之1號",
+    "desc": "在地口碑極佳，Google評分4.8★（2.1千+則評論）。",
+    "id": 343,
+    "rarity": "R",
+    "walkMin": 9
+  },
+  {
+    "name": "猓玀苑",
+    "cat": "lunch",
+    "addr": "興安街40號",
+    "desc": "Google評分4.4★，2.2千+則評論，在地人氣選擇。",
+    "id": 344,
+    "rarity": "R",
+    "walkMin": 11
+  },
+  {
+    "name": "養心茶樓 蔬食飲茶",
+    "cat": "lunch",
+    "addr": "松江路128號2樓",
+    "desc": "Google評分4.3★，8.7千+則評論，在地人氣選擇。",
+    "id": 345,
+    "rarity": "R",
+    "walkMin": 10
+  },
+  {
+    "name": "UNCLE-K 排骨火鍋店",
+    "cat": "lunch",
+    "addr": "合江街188巷1號",
+    "desc": "排骨酥火鍋專門店，湯頭濃郁，在地評價極高。",
+    "id": 346,
+    "rarity": "SR",
+    "walkMin": 13
+  },
+  {
+    "name": "Tempo House Restaurant & Bar",
+    "cat": "lunch",
+    "addr": "建國北路二段12號",
+    "desc": "在地口碑極佳，Google評分4.8★（511+則評論）。",
+    "id": 347,
+    "rarity": "R",
+    "walkMin": 13
+  },
+  {
+    "name": "蔬軾",
+    "cat": "lunch",
+    "addr": "農安街263號",
+    "desc": "在地口碑極佳，Google評分4.8★（3.2千+則評論）。",
+    "id": 348,
+    "rarity": "R",
+    "walkMin": 13
+  },
+  {
+    "name": "丰禾 台味風格料理 台北南京東店",
+    "cat": "lunch",
+    "addr": "南京東路二段146號2F",
+    "desc": "台味風格料理，擺盤精緻，評分4.7星。",
+    "id": 349,
+    "rarity": "SR",
+    "walkMin": 12
+  },
+  {
+    "name": "丸滿台灣味手路菜",
+    "cat": "lunch",
+    "addr": "林森北路353巷21號",
+    "desc": "Google評分4.3★，1.8千+則評論，在地人氣選擇。",
+    "id": 350,
+    "rarity": "R",
+    "walkMin": 15
+  },
+  {
+    "name": "すき家南京伊通",
+    "cat": "lunch",
+    "addr": "南京東路二段178-1號",
+    "desc": "Google評分3.8★（2.2千則評論）。",
+    "id": 351,
+    "rarity": "R",
+    "walkMin": 14
+  },
+  {
+    "name": "六扇門時尚鍋物-中山農安店",
+    "cat": "lunch",
+    "addr": "農安街273號",
+    "desc": "Google評分4.2★（1.2千則評論）。",
+    "id": 352,
+    "rarity": "R",
+    "walkMin": 14
+  },
+  {
+    "name": "泰滾 Rolling Thai 泰式火鍋(南京店）",
+    "cat": "lunch",
+    "addr": "南京東路二段178號B1",
+    "desc": "Google評分4.6★，6.3千+則評論，在地人氣選擇。",
+    "id": 353,
+    "rarity": "R",
+    "walkMin": 14
+  },
+  {
+    "name": "拿坡里披薩 龍江店",
+    "cat": "lunch",
+    "addr": "龍江路303號",
+    "desc": "Google評分4.1★（949則評論）。",
+    "id": 354,
+    "rarity": "R",
+    "walkMin": 14
+  },
+  {
+    "name": "Pasta & Co.",
+    "cat": "lunch",
+    "addr": "南京東路三段9號",
+    "desc": "Google評分4.4★，4.2千+則評論，在地人氣選擇。",
+    "id": 355,
+    "rarity": "R",
+    "walkMin": 16
+  },
+  {
+    "name": "老四川巴蜀麻辣燙 台北南京店",
+    "cat": "lunch",
+    "addr": "南京東路二段45號",
+    "desc": "Google評分4.5★，7.6千+則評論，在地人氣選擇。",
+    "id": 356,
+    "rarity": "R",
+    "walkMin": 16
+  },
+  {
+    "name": "雞家莊本店",
+    "cat": "lunch",
+    "addr": "長春路55號",
+    "desc": "Google評分4.2★（4.7千則評論）。",
+    "id": 357,
+    "rarity": "R",
+    "walkMin": 17
+  },
+  {
+    "name": "大和日本料理",
+    "cat": "lunch",
+    "addr": "錦州街17號",
+    "desc": "Google評分4.3★，3.7千+則評論，在地人氣選擇。",
+    "id": 358,
+    "rarity": "R",
+    "walkMin": 17
+  },
+  {
+    "name": "三井日式料理",
+    "cat": "lunch",
+    "addr": "農安街34號",
+    "desc": "高級無菜單日料，散壽司魚料豪邁澎湃。",
+    "id": 359,
+    "rarity": "SSR",
+    "walkMin": 20
+  },
+  {
+    "name": "麥當勞-長春餐廳",
+    "cat": "lunch",
+    "addr": "長春路172號",
+    "desc": "誰說SSR一定要高級？金拱門的薯條不會讓你失望。",
+    "id": 360,
+    "rarity": "SSR",
+    "walkMin": 7
+  },
+  {
+    "name": "達美樂披薩 吉林店",
+    "cat": "dinner",
+    "addr": "吉林路233號1樓",
+    "desc": "深夜放毒首選，起司拉絲的療癒感。",
+    "id": 361,
+    "rarity": "SSR",
+    "walkMin": 9
+  },
+  {
+    "name": "閣樓 LOFT",
+    "cat": "lunch",
+    "addr": "錦州街313號",
+    "desc": "在地口碑極佳，Google評分4.5★（1千+則評論）。",
+    "rarity": "SR",
+    "id": 362,
+    "walkMin": 10
+  },
+  {
+    "name": "王媽媽早餐店",
+    "cat": "lunch",
+    "addr": "中原街19號",
+    "desc": "在地口碑極佳，Google評分4.5★（603則評論）。",
+    "rarity": "R",
+    "id": 363,
+    "walkMin": 11
+  },
+  {
+    "name": "湯包洪 合江門市",
+    "cat": "lunch",
+    "addr": "合江街18號",
+    "desc": "Google評分4.3★（973則評論）。",
+    "rarity": "R",
+    "id": 364,
+    "walkMin": 13
+  },
+  {
+    "name": "食朝 早午餐",
+    "cat": "lunch",
+    "addr": "松江路132巷22-2號",
+    "desc": "Google評分4★（451則評論）。",
+    "rarity": "R",
+    "id": 365,
+    "walkMin": 12
+  },
+  {
+    "name": "JONAJA就那家早午餐",
+    "cat": "lunch",
+    "addr": "農安街231號",
+    "desc": "在地口碑極佳，Google評分4.6★（461則評論）。",
+    "rarity": "R",
+    "id": 366,
+    "walkMin": 12
+  },
+  {
+    "name": "伯朗咖啡館 南京概念店",
+    "cat": "lunch",
+    "addr": "南京東路二段218號",
+    "desc": "Google評分4★（3.2千+則評論）。",
+    "rarity": "R",
+    "id": 367,
+    "walkMin": 16
+  },
+  {
+    "name": "三個傻瓜印度蔬食餐廳",
+    "cat": "lunch",
+    "addr": "長春路318號",
+    "desc": "在地口碑極佳，Google評分4.7★（4.6千+則評論）。",
+    "rarity": "SR",
+    "id": 368,
+    "walkMin": 16
+  },
+  {
+    "name": "世界豆漿大王",
+    "cat": "lunch",
+    "addr": "林森北路310巷27號",
+    "desc": "Google評分4.1★（1.1千+則評論）。",
+    "rarity": "R",
+    "id": 369,
+    "walkMin": 18
+  },
+  {
+    "name": "Daylight光合箱子 中山店",
+    "cat": "lunch",
+    "addr": "民權東路三段60巷7號",
+    "desc": "Google評分4.1★（2.5千+則評論）。",
+    "rarity": "R",
+    "id": 370,
+    "walkMin": 17
+  },
+  {
+    "name": "說故事餐酒館",
+    "cat": "lunch",
+    "addr": "民權東路一段74號",
+    "desc": "在地口碑極佳，Google評分4.8★（1.5千+則評論）。",
+    "rarity": "SR",
+    "id": 371,
+    "walkMin": 19
+  },
+  {
+    "name": "波宇咖啡",
+    "cat": "lunch",
+    "addr": "長春路362號",
+    "desc": "在地口碑極佳，Google評分4.6★（188則評論）。",
+    "rarity": "SR",
+    "id": 372,
+    "walkMin": 19
+  },
+  {
+    "name": "CE' & LIB-RARY 遼寧店",
+    "cat": "lunch",
+    "addr": "遼寧街134號",
+    "desc": "Google評分4★（818則評論）。",
+    "rarity": "R",
+    "id": 373,
+    "walkMin": 20
+  },
+  {
+    "name": "迪諾早午餐",
+    "cat": "lunch",
+    "addr": "德惠街95號1樓",
+    "desc": "在地口碑極佳，Google評分4.8★（626則評論）。",
+    "rarity": "R",
+    "id": 374,
+    "walkMin": 20
+  },
+  {
+    "name": "金大亨早餐店",
+    "cat": "lunch",
+    "addr": "民權東路三段39巷7號",
+    "desc": "Google評分4.1★（147則評論）。",
+    "rarity": "R",
+    "id": 375,
+    "walkMin": 20
+  },
+  {
+    "name": "父母 FUMU CAFE & BAR",
+    "cat": "lunch",
+    "addr": "興安街103號",
+    "desc": "Google評分4.3★（2.1千+則評論）。",
+    "rarity": "R",
+    "id": 376,
+    "walkMin": 18
+  },
+  {
+    "name": "蛋室BUT",
+    "cat": "lunch",
+    "addr": "長安東路二段129巷7號",
+    "desc": "在地口碑極佳，Google評分4.8★（260則評論）。",
+    "rarity": "R",
+    "id": 377,
+    "walkMin": 20
+  },
+  {
+    "name": "上山採覓",
+    "cat": "lunch",
+    "addr": "復興北路430巷6號",
+    "desc": "Google評分4★（1.1千+則評論）。",
+    "rarity": "R",
+    "id": 378,
+    "walkMin": 22
+  },
+  {
+    "name": "4+ Break Breakfast",
+    "cat": "lunch",
+    "addr": "松江路53號",
+    "desc": "在地口碑極佳，Google評分4.8★（1.7千+則評論）。",
+    "rarity": "SR",
+    "id": 379,
+    "walkMin": 17
+  },
+  {
+    "name": "小小 Little By Little 咖啡餐食",
+    "cat": "lunch",
+    "addr": "南京東路三段223巷16號",
+    "desc": "Google評分4.2★（692則評論）。",
+    "rarity": "R",
+    "id": 380,
+    "walkMin": 22
+  },
+  {
+    "name": "十巷咖哩",
+    "cat": "lunch",
+    "addr": "雙城街10巷25-1號",
+    "desc": "Google評分4.4★（7.1千+則評論）。",
+    "rarity": "SR",
+    "id": 381,
+    "walkMin": 23
+  },
+  {
+    "name": "唯樂漢堡",
+    "cat": "lunch",
+    "addr": "復興北路514巷36號",
+    "desc": "Google評分4.1★（508則評論）。",
+    "rarity": "R",
+    "id": 382,
+    "walkMin": 24
+  },
+  {
+    "name": "享念販糰 復北店",
+    "cat": "lunch",
+    "addr": "復興北路231巷17-2號",
+    "desc": "Google評分4.4★（224則評論）。",
+    "rarity": "R",
+    "id": 383,
+    "walkMin": 19
+  },
+  {
+    "name": "Q Burger 中山復興店",
+    "cat": "lunch",
+    "addr": "復興北路514巷34號",
+    "desc": "Google評分4.2★（537則評論）。",
+    "rarity": "R",
+    "id": 384,
+    "walkMin": 24
+  },
+  {
+    "name": "Dine in cafe",
+    "cat": "lunch",
+    "addr": "中山北路二段36巷11號1樓",
+    "desc": "在地口碑極佳，Google評分4.6★（945則評論）。",
+    "rarity": "R",
+    "id": 385,
+    "walkMin": 24
+  },
+  {
+    "name": "不然-南西店",
+    "cat": "lunch",
+    "addr": "中山北路二段16巷12號6樓",
+    "desc": "Google評分4★（592則評論）。",
+    "rarity": "R",
+    "id": 386,
+    "walkMin": 27
+  },
+  {
+    "name": "咖啡瑪榭 中山店",
+    "cat": "lunch",
+    "addr": "中山北路二段16巷15號1樓",
+    "desc": "Google評分4.2★（2.8千+則評論）。",
+    "rarity": "R",
+    "id": 387,
+    "walkMin": 27
+  },
+  {
+    "name": "Ctrl+F Brunch & Cafe",
+    "cat": "lunch",
+    "addr": "雙城街54號",
+    "desc": "Google評分4.1★（989則評論）。",
+    "rarity": "R",
+    "id": 388,
+    "walkMin": 28
+  },
+  {
+    "name": "大王漢寶殿",
+    "cat": "lunch",
+    "addr": "南京西路25巷18-1號",
+    "desc": "Google評分4★（877則評論）。",
+    "rarity": "R",
+    "id": 389,
+    "walkMin": 27
+  },
+  {
+    "name": "SMEXY音樂餐廳",
+    "cat": "lunch",
+    "addr": "民生東路三段131號B1",
+    "desc": "Google評分4.3★（1.2千+則評論）。",
+    "rarity": "R",
+    "id": 390,
+    "walkMin": 21
+  },
+  {
+    "name": "ADDICT沉癮餐酒館",
+    "cat": "lunch",
+    "addr": "中山北路一段73號",
+    "desc": "Google評分4.2★（577則評論）。",
+    "rarity": "R",
+    "id": 391,
+    "walkMin": 29
+  },
+  {
+    "name": "Local Local",
+    "cat": "lunch",
+    "addr": "長安西路19巷2弄29號",
+    "desc": "Google評分4★（322則評論）。",
+    "rarity": "R",
+    "id": 392,
+    "walkMin": 31
+  },
+  {
+    "name": "Razzle Dazzle 文明放縱鹽酥雞小酒館",
+    "cat": "lunch",
+    "addr": "中山北路一段51號",
+    "desc": "在地口碑極佳，Google評分4.7★（394則評論）。",
+    "rarity": "R",
+    "id": 393,
+    "walkMin": 31
+  },
+  {
+    "name": "饗旅",
+    "cat": "lunch",
+    "addr": "天津街18號",
+    "desc": "在地口碑極佳，Google評分4.6★（2.1千+則評論）。",
+    "rarity": "SR",
+    "id": 394,
+    "walkMin": 31
+  },
+  {
+    "name": "想柒飯-木片餐盒",
+    "cat": "lunch",
+    "addr": "錦州街258號",
+    "desc": "Google評分3.6★（130則評論）。",
+    "rarity": "R",
+    "id": 395,
+    "walkMin": 5
+  },
+  {
+    "name": "楽坡BonBox舒肥健康餐盒",
+    "cat": "lunch",
+    "addr": "民權東路二段92巷10號",
+    "desc": "在地口碑極佳，Google評分4.6★（324則評論）。",
+    "rarity": "R",
+    "id": 396,
+    "walkMin": 7
+  },
+  {
+    "name": "蔡老師蔬食便當松江店",
+    "cat": "lunch",
+    "addr": "松江路362巷25號",
+    "desc": "Google評分4.4★（172則評論）。",
+    "rarity": "R",
+    "id": 397,
+    "walkMin": 8
+  },
+  {
+    "name": "飽哥健康餐盒 中山店",
+    "cat": "lunch",
+    "addr": "合江街102巷2號之1",
+    "desc": "Google評分4.2★（26則評論）。",
+    "rarity": "R",
+    "id": 398,
+    "walkMin": 9
+  },
+  {
+    "name": "健康水煮餐盒Dr.salt",
+    "cat": "lunch",
+    "addr": "南京東路二段115巷3弄1號",
+    "desc": "在地口碑極佳，Google評分4.5★（289則評論）。",
+    "rarity": "R",
+    "id": 399,
+    "walkMin": 10
+  },
+  {
+    "name": "一手私藏世界紅茶 中山錦州店",
+    "cat": "drink",
+    "addr": "錦州街265號",
+    "desc": "Google評分4★（114則評論）。",
+    "rarity": "R",
+    "id": 400,
+    "walkMin": 5
+  },
+  {
+    "name": "思宅 SI·JAI",
+    "cat": "drink",
+    "addr": "松江路297巷6號",
+    "desc": "在地口碑極佳，Google評分4.6★（323則評論）。",
+    "rarity": "R",
+    "id": 401,
+    "walkMin": 6
+  },
+  {
+    "name": "可不可熟成茶行-台北長春店",
+    "cat": "drink",
+    "addr": "長春路182-2號",
+    "desc": "Google評分4.1★（312則評論）。",
+    "rarity": "R",
+    "id": 402,
+    "walkMin": 8
+  },
+  {
+    "name": "叮哥茶飲-NEW長春店",
+    "cat": "drink",
+    "addr": "伊通街127-4號",
+    "desc": "Google評分4.3★（309則評論）。",
+    "rarity": "R",
+    "id": 403,
+    "walkMin": 9
+  },
+  {
+    "name": "珍煮丹 台北合江店",
+    "cat": "drink",
+    "addr": "合江街152-1號",
+    "desc": "Google評分3.5★（286則評論）。",
+    "rarity": "R",
+    "id": 404,
+    "walkMin": 11
+  },
+  {
+    "name": "迷客夏 臺北伊通店",
+    "cat": "drink",
+    "addr": "伊通街68-3號",
+    "desc": "Google評分3.6★（417則評論）。",
+    "rarity": "R",
+    "id": 405,
+    "walkMin": 12
+  },
+  {
+    "name": "集客人間茶館-民權店",
+    "cat": "drink",
+    "addr": "民權東路二段21號",
+    "desc": "在地口碑極佳，Google評分4.5★（6.7千+則評論）。",
+    "rarity": "SR",
+    "id": 406,
+    "walkMin": 13
+  },
+  {
+    "name": "可不可熟成茶行 台北伊通店",
+    "cat": "drink",
+    "addr": "伊通街51號",
+    "desc": "Google評分3.3★（325則評論）。",
+    "rarity": "R",
+    "id": 407,
+    "walkMin": 15
+  },
+  {
+    "name": "抿茶 min cha 復北興安店",
+    "cat": "drink",
+    "addr": "興安街53號",
+    "desc": "Google評分4.4★（407則評論）。",
+    "rarity": "R",
+    "id": 408,
+    "walkMin": 15
+  },
+  {
+    "name": "CoCo都可 林森北店",
+    "cat": "drink",
+    "addr": "林森北路438號",
+    "desc": "Google評分4★（527則評論）。",
+    "rarity": "R",
+    "id": 409,
+    "walkMin": 15
+  },
+  {
+    "name": "樂法 Le Phare 林森店",
+    "cat": "drink",
+    "addr": "林森北路263-5號",
+    "desc": "Google評分3.5★（480則評論）。",
+    "rarity": "R",
+    "id": 410,
+    "walkMin": 18
+  },
+  {
+    "name": "天仁釀茶所林森北路店",
+    "cat": "drink",
+    "addr": "林森北路261號",
+    "desc": "Google評分3.7★（427則評論）。",
+    "rarity": "R",
+    "id": 411,
+    "walkMin": 19
+  },
+  {
+    "name": "50嵐 台北林森店",
+    "cat": "drink",
+    "addr": "林森北路264號1樓",
+    "desc": "Google評分4.4★（242則評論）。",
+    "rarity": "R",
+    "id": 412,
+    "walkMin": 18
+  },
+  {
+    "name": "50嵐 晴光店",
+    "cat": "drink",
+    "addr": "農安街22號",
+    "desc": "Google評分3.5★（486則評論）。",
+    "rarity": "R",
+    "id": 413,
+    "walkMin": 23
+  },
+  {
+    "name": "天仁茗茶喫茶趣 復興店",
+    "cat": "drink",
+    "addr": "復興北路152號",
+    "desc": "Google評分4.1★（1.9千+則評論）。",
+    "rarity": "R",
+    "id": 414,
+    "walkMin": 23
+  },
+  {
+    "name": "一沐日 台北農安店",
+    "cat": "drink",
+    "addr": "農安街17-1號",
+    "desc": "Google評分4.1★（242則評論）。",
+    "rarity": "R",
+    "id": 415,
+    "walkMin": 24
+  },
+  {
+    "name": "迷客夏 MilkSha 臺北農安店",
+    "cat": "drink",
+    "addr": "農安街12號",
+    "desc": "Google評分3.7★（296則評論）。",
+    "rarity": "R",
+    "id": 416,
+    "walkMin": 24
+  },
+  {
+    "name": "三白茉莉-茶飲專門店",
+    "cat": "drink",
+    "addr": "民權東路三段103巷35號",
+    "desc": "在地口碑極佳，Google評分4.7★（179則評論）。",
+    "rarity": "R",
+    "id": 417,
+    "walkMin": 25
   }
 ]
